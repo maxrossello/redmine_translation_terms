@@ -1,6 +1,6 @@
 # Redmine Translation Terms
 
-Tested with Redmine 3.4.6, 3.4.7. *En*, *en-GB* and *it* locales are supported.
+Tested with Redmine 3.4.6, 3.4.7, 3.4.8. *En*, *en-GB* and *it* locales are supported.
 
 Allows to customize specific terms in Redmine translations, and allows third party plugins to support translations containing customizable terms.
 
