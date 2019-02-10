@@ -68,6 +68,7 @@ module I18nPatch
         files = []
         Redmine::Plugin.registered_plugins.values.each do |plugin|
           files += Dir.glob(File.join(plugin.directory, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
+          files += Dir.glob(File.join(Rails.root, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
         end
         files.sort {|x,y| File.basename(x) <=> File.basename(y)}.each do |file|
           @overrides[I18n.locale] ||= {}
