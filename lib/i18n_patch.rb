@@ -26,9 +26,13 @@ module Redmine
     def l(*args)
       case args.size
       when 1
-        ::I18n.t(*args)
+        if args.first.is_a?(Date) or args.first.is_a?(DateTime) or args.first.is_a?(Time)
+          ::I18n.localize(*args)
+        else
+          ::I18n.t(*args)
+        end
       when 2
-        if args.first.is_a?(Date)
+        if args.first.is_a?(Date) or args.first.is_a?(DateTime) or args.first.is_a?(Time)
           ::I18n.localize(*args)
         elsif args.last.is_a?(Hash)
           ::I18n.t(*args)
