@@ -61,7 +61,7 @@ en:
   setting_default_projects_public: "New %{projects} are public by default"
   setting_cross_project_issue_relations: "Allow cross-%{project} %{issue} relations"
   setting_cross_project_subtasks: "Allow cross-%{project} %{issue_subtasks}"
-  setting_issue_list_default_columns: "Default columns displayed on the %{issue} list"
+  setting_issue_list_default_columns: "%{Issues} list defaults"
   setting_display_subprojects_issues: "Display %{subprojects} %{issues} on main %{projects} by default"
   setting_issue_done_ratio: "Calculate the %{issue} done ratio with"
   setting_issue_done_ratio_issue_field: "Use the %{issue} field"
@@ -72,6 +72,7 @@ en:
   setting_default_projects_tracker_ids: "Default %{issue_trackers} for new %{projects}"
   setting_link_copied_issue: "Link %{issues} on copy"
   setting_new_item_menu_tab: "%{Project} menu tab for creating new objects"
+  setting_close_duplicate_issues: "Close duplicate %{issues} automatically"
 
   permission_add_project: "Create %{project}"
   permission_add_subprojects: "Create %{subprojects}"
@@ -92,7 +93,6 @@ en:
   permission_edit_own_issue_notes: "Edit own %{issue_notes}"
   permission_view_private_notes: "View private %{issue_notes}"
   permission_set_notes_private: "Set %{issue_notes} as private"
-  permission_move_issues: "Move %{issues}"
   permission_delete_issues: "Delete %{issues}"
   permission_view_issue_watchers: "View %{issue_watchers} list"
   permission_add_issue_watchers: "Add %{issue_watchers}"
@@ -243,5 +243,10 @@ en:
   description_choose_project: "%{Projects}"
   description_notes: "%{issue_Notes}"
   description_issue_category_reassign: "Choose %{issue} %{issue_category}"
+
+  text_login_required_html: 'When not requiring authentication, public %{projects} and their contents are openly available on the network. You can <a href="%{anonymous_role_path}">edit the applicable permissions</a>.'
+  label_login_required_no: "No, allow anonymous access to public %{projects}"
+  text_project_is_public_non_member: "Public %{projects} and their contents are available to all logged-in users."
+  text_project_is_public_anonymous: "Public %{projects} and their contents are openly available on the network."
 
   test_term: "%{test_translation}"

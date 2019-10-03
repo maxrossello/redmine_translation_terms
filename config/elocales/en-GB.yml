@@ -90,7 +90,6 @@ en-GB:
   permission_edit_own_issue_notes: "Edit own %{issue_notes}"
   permission_view_private_notes: "View private %{issue_notes}"
   permission_set_notes_private: "Set %{issue_notes} as private"
-  permission_move_issues: "Move %{issues}"
   permission_delete_issues: "Delete %{issues}"
   permission_view_issue_watchers: "View %{issue_watchers} list"
   permission_add_issue_watchers: "Add %{issue_watchers}"
@@ -240,3 +239,13 @@ en-GB:
   description_choose_project: "%{Projects}"
   description_notes: "%{issue_Notes}"
   description_issue_category_reassign: "Choose %{issue} %{issue_category}"
+
+  setting_close_duplicate_issues: "Close duplicate %{issues} automatically"
+  text_login_required_html: 'When not requiring authentication, public %{projects} and their
+    contents are openly available on the network. You can <a href="%{anonymous_role_path}">edit
+    the applicable permissions</a>.'
+    label_login_required_no: No, allow anonymous access to public projects
+  text_project_is_public_non_member: "Public %{projects} and their contents are available
+    to all logged-in users."
+  text_project_is_public_anonymous: "Public %{projects} and their contents are openly available
+    on the network."
