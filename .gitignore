@@ -1,0 +1,15 @@
+.buildpath
+.byebug_history
+.metadata/
+.project
+Gemfile.lock
+config/configuration.yml
+config/database*
+config/initializers/
+coverage/
+db/
+files/
+log/
+public/
+test/
+tmp/
