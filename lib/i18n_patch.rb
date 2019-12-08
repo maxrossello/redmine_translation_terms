@@ -18,9 +18,23 @@
 require 'i18n'
 require 'redmine/i18n'
 
+# Redmine::I18n seems to have cases of localize called with other than Date, DateTime, Time in
+# methods like format_date. Sometimes the I18n::l alias is not called.
+module RedmineI18nPatch
+  # localize
+  def l(*args)
+    if args.first.is_a?(Date) or args.first.is_a?(DateTime) or args.first.is_a?(Time)
+      ::I18n.localize(*args)
+    else
+      super *args
+    end
+  end
+end
+
+
 # patch to add interpolated translations
 module I18nPatch
-
+    # translate with terms interpolation
     def translate(*args)
       options = args.last.is_a?(Hash) ? args.pop.dup : {}
       key = args.shift
@@ -41,11 +55,13 @@ module I18nPatch
     end
     
     alias :t :translate
-
 end
 
 unless I18n.singleton_class.included_modules.include?(I18nPatch)
   I18n.singleton_class.send(:prepend, I18nPatch)
 end
 
+unless Redmine::I18n.included_modules.include?(RedmineI18nPatch)
+  Redmine::I18n.send(:prepend, RedmineI18nPatch)
+end
 
