@@ -23,7 +23,7 @@ en-GB:
   error_issue_done_ratios_not_updated: "%{Issue} done ratios not updated."
   error_workflow_copy_source: 'Please select a source %{issue_tracker} or role'
   error_workflow_copy_target: 'Please select target %{issue_tracker_or_trackers} and role(s)'
-  error_unable_delete_issue_status: 'Unable to delete %{issue} %{issue_status}'
+  error_unable_delete_issue_status: 'Unable to delete %{issue} %{issue_status} (%{value})'
   error_no_tracker_allowed_for_new_issue_in_project: "The %{project} doesn't have any %{issue_trackers} for which you can create an %{issue}"
   error_no_projects_with_tracker_allowed_for_new_issue: "There are no %{projects} with %{issue_trackers} for which you can create an %{issue}"
   error_move_of_child_not_possible: "%{issue_Subtask} %{child} could not be moved to the new %{project}: %{errors}"
@@ -190,7 +190,6 @@ en-GB:
   label_issues_visibility_own: "%{Issues} created by or %{issue_assigned_to} the user"
   label_copy_subtasks: "Copy %{issue_subtasks}"
   label_search_for_watchers: "Search for %{issue_watchers} to add"
-  label_show_closed_projects: "View closed %{projects}"
   label_status_transitions: "%{issue_Status} transitions"
   label_attribute_of_project: "%{Project}'s %{name}"
   label_attribute_of_issue: "%{Issue}'s %{name}"
@@ -249,3 +248,18 @@ en-GB:
     to all logged-in users."
   text_project_is_public_anonymous: "Public %{projects} and their contents are openly available
     on the network."
+  text_status_no_workflow: "No %{issue_tracker} uses this %{issue_status} in the workflows"
+  setting_show_status_changes_in_mail_subject: "Show %{issue_status} changes in %{issue} mail notifications
+    subject"
+  label_inherited_from_parent_project: "Inherited from parent %{project}"
+  label_trackers_description: "%{issue_Trackers} description"
+  label_open_trackers_description: "View all %{issue_trackers} description"
+  field_parent_issue_subject: "%{Parent_task} subject"
+  permission_edit_own_issues: "Edit own %{issues}"
+  text_select_apply_tracker: "Select %{issue_tracker}"
+  label_updated_issues: "Updated %{issues}"
+  field_recently_used_projects: "Number of recently used %{projects} in jump box"
+  label_optgroup_others: "Other %{projects}"
+  field_history_default_tab: "%{Issue}'s history default tab"
+  label_issue_history_notes: "%{issue_Notes}"
+  setting_project_list_defaults: "%{Projects} list defaults"

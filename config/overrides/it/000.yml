@@ -17,7 +17,7 @@ segnalazione_La: "La "
 segnalazione_le: "le "
 segnalazione_una: "una "
 segnalazione_Una: "Una "
-segnalazione_della: "della "
+segnalazione_della: "dell'"
 segnalazione_delle: "delle "
 segnalazione_sulle: "sulle "
 segnalazione_alle: "alle "
@@ -93,6 +93,7 @@ segnalazione_stati: stati
 segnalazione_Stato: Stato
 segnalazione_Stati: Stati
 segnalazione_stato_lo: "lo "
+segnalazione_stato_questo: questo
 segnalazione_stato_Nessuno: Nessuno
 segnalazione_stato_Nuovo: Nuovo
 segnalazione_stati_Nuovi: Nuovi
@@ -125,11 +126,13 @@ segnalazione_tracker: tracker
 segnalazione_tracker_plurale: tracker
 segnalazione_Tracker_plurale: Tracker
 segnalazione_tracker_i: "i "
+segnalazione_tracker_dei: "dei"
 segnalazione_tracker_Nuovo: Nuovo
 segnalazione_tracker_un: "un "
 segnalazione_tracker_questo: questo
 segnalazione_tracker_Questo: Questo
 segnalazione_tracker_nessun: nessun
+segnalazione_tracker_Nessun: Nessun
 segnalazione_tracker_Tutti: Tutti
 segnalazione_tracker_associato: associato
 segnalazione_tracker_eliminato: eliminato
@@ -148,6 +151,8 @@ progetto_i: "i "
 progetto_I: "I "
 progetto_un: "un "
 progetto_al: "al "
+progetto_ai: "ai"
+progetto_dal: "dal"
 progetto_dei: "dei "
 progetto_del: "del "
 progetto_nel: "nel "
@@ -161,6 +166,7 @@ progetto_Tutti: Tutti
 progetto_nuovi: nuovi
 progetto_Nuovo: Nuovo
 progetto_altri: altri
+progetto_Altri: Altri
 progetto_nessun: nessun
 progetto_questo: questo
 progetto_Questo: Questo
@@ -177,6 +183,7 @@ progetto_padre: padre
 progetto_stato: stato  # come in "e' stato"
 progetto_privo: privo
 progetto_diversi: diversi
+progetto_usati: usati
 sottoprogetto: sottoprogetto
 Sottoprogetto: Sottoprogetto
 sottoprogetti: sottoprogetti

@@ -178,7 +178,7 @@ it:
     Stai per eliminare alcuni o tutti i permessi e non sarai più in grado di modificare %{progetto_questo} %{progetto} dopo tale azione.
     Sei sicuro di voler continuare?"
   permission_manage_project_activities: "Gestisci attività %{progetti}"
-  error_unable_delete_issue_status: "Impossibile eliminare %{segnalazione_stato_lo}%{segnalazione_stato} %{segnalazioni}"
+  error_unable_delete_issue_status: "Impossibile eliminare %{segnalazione_stato_lo}%{segnalazione_stato} %{segnalazioni} (%{value})"
   permission_manage_subtasks: "Gestisci %{sottosegnalazione}"
   field_parent_issue: "%{segnalazione_Madre}"
   label_subtask_plural: "%{Sottosegnalazioni}"
@@ -219,7 +219,6 @@ it:
   permission_manage_related_issues: "Gestisci %{segnalazione_relative} %{segnalazioni}"
   label_search_for_watchers: "Cerca %{segnalazione_osservatori} da aggiungere"
   permission_close_project: "Chiusura / riapertura %{progetto}"
-  label_show_closed_projects: "Vedi %{progetti} %{progetto_chiusi}"
   project_status_active: "%{progetto_attivo}"
   project_status_closed: "%{progetto_chiuso}"
   project_status_archived: "%{progetto_archiviato}"
@@ -260,8 +259,8 @@ it:
   error_no_tracker_allowed_for_new_issue_in_project: "%{progetto_Il}%{progetto} non ha %{segnalazione_tracker}
     per cui puoi creare %{segnalazione_una}%{segnalazione}"
   label_tracker_all: "%{segnalazione_tracker_Tutti} %{segnalazione_tracker_i}%{segnalazione_tracker_plurale}"
-  label_new_project_issue_tab_enabled: 'Mostra il tab "%{segnalazione Nuova} %{segnalazione}"'
-  setting_new_item_menu_tab: "Tab nel menu di %{progetto} per creare nuovi oggetti"
+  label_new_project_issue_tab_enabled: 'Mostra la scheda "%{segnalazione Nuova} %{segnalazione}"'
+  setting_new_item_menu_tab: "Scheda di creazione oggetti nel menu %{progetto_del}%{progetto}"
   error_no_projects_with_tracker_allowed_for_new_issue: "Non ci sono %{progetti} con %{segnalazione_tracker_plurale}
     per cui puoi creare %{segnalazione_una}%{segnalazione}"
   error_move_of_child_not_possible: '%{sottosegnalazione_La}%{sottosegnalazione} %{child} non può essere %{sottosegnalazione_spostata} %{progetto_nel}%{progetto_nuovo}
@@ -269,14 +268,28 @@ it:
   error_cannot_reassign_time_entries_to_an_issue_about_to_be_deleted: "Il tempo speso non può
     essere riassegnato a %{segnalazione_una}%{segnalazione} che sta per essere %{segnalazione_rimossa}"
   label_user_mail_option_only_assigned: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono %{segnalazione_assegnatario_lo}%{segnalazione_assegnatario}"
-  label_user_mail_option_only_owner: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono il proprietario"
-  field_default_assigned_to: "%{segnalazione_Assegnatario} di default"
+  label_user_mail_option_only_owner: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono autore"
+  field_default_assigned_to: "%{segnalazione_Assegnatario} predefinito"
   setting_close_duplicate_issues: "Chiudi %{segnalazioni} %{segnalazione_duplicate} automaticamente"
-  text_login_required_html: 'Quando non si richiede autenticazione, ${progetto_i} %{progetti} %{progetto_pubblici} ed i loro
-    contenuti sono disponibili senza protezione in rete. Puoi <a href="%{anonymous_role_path}">modificare
-    i permessi</a>.'
-  label_login_required_no: "No, permetti l'accesso a %{progetti} %progetto_pubblici} senza autenticazione"
+  text_login_required_html: "Disattivando l'autenticazione obbligatoria, ${progetto_i} %{progetti} %{progetto_pubblici} e il loro
+    contenuto, saranno liberamente accessibili in rete. Si possono <a href=\"%{anonymous_role_path}\">modificare
+    i permessi applicabili</a>."
+  label_login_required_no: "No, consenti accesso anonimo %{progetto_ai} %{progetti} %{progetto_pubblici}"
   text_project_is_public_non_member: "%{progetto_I}%{progetti} %{progetto_pubblici} e i loro contenuti sono disponibili
     agli utenti autenticati"
   text_project_is_public_anonymous: "%{progetto_I}%{progetti} %{progetto_pubblici} e i loro contenuti sono disponibili
     in rete senza autenticazione"
+  text_status_no_workflow: "%{segnalazione_tracker_Nessun} %{segnalazione_tracker} usa %{segnalazione_stato_questo} %{segnalazione_stato} in the workflows"
+  setting_show_status_changes_in_mail_subject: "Mostra cambiamenti di %{segnalazione_stato} nell'oggetto delle mail di notifica ${segnalazioni}"
+  label_inherited_from_parent_project: "Ereditato %{progetto_dal} %{progetto} %{progetto_padre}"
+  label_trackers_description: "Descrizione %{segnalazione_tracker_dei} %{segnalazione_tracker_plurale}"
+  label_open_trackers_description: "Vedi tutte le descrizioni %{segnalazione_tracker_dei} %{segnalazione_tracker_plurale}"
+  field_parent_issue_subject: "Oggetto %{segnalazione_della}%{segnalazione_madre}"
+  permission_edit_own_issues: "Modifica %{segnalazione_le}%{segnalazione_proprie} %{segnalazioni}"
+  text_select_apply_tracker: "Seleziona %{tracker}"
+  label_updated_issues: "%{Segnalazioni} %{segnalazione_aggiornate}"
+  field_recently_used_projects: "Numero di %{progetti} %{progetto_usati} recentemente nella selezione di ricerca rapida"
+  label_optgroup_others: "%{progetto_Altri} %{progetti}"
+  field_history_default_tab: "Scheda predefinita di storico ${segnalazioni}"
+  label_issue_history_notes: "%{segnalazione_Note}"
+  setting_project_list_defaults: "Lista %{progetti} predefinita"
