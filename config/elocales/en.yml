@@ -152,7 +152,7 @@ en:
   label_open_issues: "%{issue_open}"
   label_open_issues_plural: "%{issues_open}"
   label_closed_issues: "%{issue_closed}"
-  label_closed_issues_plural: "%{issue_closed}"
+  label_closed_issues_plural: "%{issues_closed}"
   label_x_open_issues_abbr:
     zero: "0 %{issues_open}"
     one: "1 %{issue_open}"

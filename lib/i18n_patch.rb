@@ -64,4 +64,3 @@ end
 unless Redmine::I18n.included_modules.include?(RedmineI18nPatch)
   Redmine::I18n.send(:prepend, RedmineI18nPatch)
 end
-
