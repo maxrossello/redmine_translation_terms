@@ -1,9 +1,9 @@
 # Redmine Translation Terms
 
-Tested with Redmine version matching the plugin version. Other supported versions come with dedicated tags. 
-*En*, *en-GB* and *it* locales are supported.
+The plugin version corresponds to minimum version of Redmine required. Look at dedicated branch for each Redmine version.
 
 Allows to customize specific terms in Redmine translations, and allows third party plugins to support translations containing customizable terms.
+*En*, *en-GB* and *it* locales are supported.
 
 ## TL;DR
 
