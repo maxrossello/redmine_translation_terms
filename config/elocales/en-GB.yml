@@ -9,7 +9,6 @@ en-GB:
 
   notice_not_authorized_archived_project: "The %{project} you're trying to access has been archived."
   notice_failed_to_save_issues: "Failed to save %{count} %{issue_or_issues} on %{total} selected: %{ids}."
-  notice_no_issue_selected: "No %{issue} is selected! Please, check the %{issues} you want to edit."
   notice_issue_done_ratios_updated: "%{Issue} done ratios updated."
   notice_issue_successful_create: "%{Issue} %{id} created."
   notice_issue_update_conflict: "The %{issue} has been updated by an other user while you were editing it."
@@ -263,3 +262,17 @@ en-GB:
   field_history_default_tab: "%{Issue}'s history default tab"
   label_issue_history_notes: "%{issue_Notes}"
   setting_project_list_defaults: "%{Projects} list defaults"
+  label_user_mail_notify_about_high_priority_issues_html: Also notify me about %{issues}
+    with a %{issue_priority} of <em>%{prio}</em> or higher
+  notice_issue_not_closable_by_open_tasks: This %{issue} cannot be closed because it has
+    at least one open %{issue_subtask}.
+  notice_issue_not_closable_by_blocking_issue: This %{issue} cannot be closed because it
+    is blocked by at least one open %{issue}.
+  notice_issue_not_reopenable_by_closed_parent_issue: This %{issue} cannot be reopened
+    because its parent %{issue} is closed.
+  permission_delete_project: Delete the %{project}
+  text_project_destroy_enter_identifier: To confirm, please enter the %{project}'s identifier
+    (%{identifier}) below.
+  button_add_subtask: Add %{issue_subtask}
+  notice_invalid_watcher: 'Invalid %{issue_watcher}: User will not receive any notifications
+    because it does not have access to view this object.'
