@@ -9,11 +9,14 @@ en:
 
   notice_not_authorized_archived_project: "The %{project} you're trying to access has been archived."
   notice_failed_to_save_issues: "Failed to save %{count} %{issue_or_issues} on %{total} selected: %{ids}."
-  notice_no_issue_selected: "No %{issue} is selected! Please, check the %{issues} you want to edit."
   notice_issue_done_ratios_updated: "%{Issue} done ratios updated."
   notice_issue_successful_create: "%{Issue} %{id} created."
   notice_issue_update_conflict: "The %{issue} has been updated by an other user while you were editing it."
-
+  notice_issue_not_closable_by_open_tasks: "This %{issue} cannot be closed because it has at least one open %{issue_subtask}."
+  notice_issue_not_closable_by_blocking_issue: "This %{issue} cannot be closed because it is blocked by at least one open %{issue}."
+  notice_issue_not_reopenable_by_closed_parent_issue: "This %{issue} cannot be reopened because its parent %{issue} is closed."
+  notice_invalid_watcher: "Invalid %{issue_watcher}: User will not receive any notifications because it does not have access to view this object."
+  
   error_issue_not_found_in_project: 'The %{issue} was not found or does not belong to this %{project}'
   error_no_tracker_in_project: 'No %{issue_tracker} is associated to this %{project}. Please check the %{project} settings.'
   error_no_default_issue_status: 'No default %{issue} %{issue_status} is defined. Please check your configuration (Go to "Administration -> %{Issue} %{issue_statuses}").'
@@ -83,6 +86,7 @@ en:
   permission_add_subprojects: "Create %{subprojects}"
   permission_edit_project: "Edit %{project}"
   permission_close_project: "Close / reopen the %{project}"
+  permission_delete_project: "Delete the %{project}"
   permission_select_project_modules: "Select %{project} modules"
   permission_manage_project_activities: "Manage %{project} activities"
   permission_manage_categories: "Manage %{issue} %{issue_categories}"
@@ -186,6 +190,7 @@ en:
   label_user_mail_option_only_my_events: "Only for things I %{issue_watch} or I'm involved in"
   label_user_mail_option_only_assigned: "Only for things I %{issue_watch} or I %{issue_am_assigned_to}"
   label_user_mail_option_only_owner: "Only for things I %{issue_watch} or I am the owner of"
+  label_user_mail_notify_about_high_priority_issues_html: "Also notify me about %{issues} with a %{issue_priority} of <em>%{prio}</em> or higher"  
   label_issue_watchers: "%{issue_Watchers}"
   label_version_sharing_descendants: "With %{subprojects}"
   label_version_sharing_hierarchy: "With %{project} hierarchy"
@@ -225,6 +230,8 @@ en:
   label_open_trackers_description: "View all %{issue_trackers} description"
   label_issue_history_notes: "%{issue_Notes}"
 
+  button_add_subtask: Add %{issue_subtask}
+  
   text_project_destroy_confirmation: "Are you sure you want to delete this %{project} and related data?"
   text_subprojects_destroy_warning: "Its %{subproject_or_subprojects}: %{value} will be also deleted."
   text_workflow_edit: "Select a role and a %{issue_tracker} to edit the workflow"
@@ -263,4 +270,6 @@ en:
   text_project_is_public_non_member: "Public %{projects} and their contents are available to all logged-in users."
   text_project_is_public_anonymous: "Public %{projects} and their contents are openly available on the network."
 
+  text_project_destroy_enter_identifier: "To confirm, please enter the %{project}'s identifier (%{identifier}) below."
+  
   test_term: "%{test_translation}"

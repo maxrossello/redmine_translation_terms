@@ -15,6 +15,7 @@ issue_note: note
 issue_notes: notes
 issue_Note: Note
 issue_Notes: Notes
+issue_watcher: watcher
 issue_watchers: watchers
 issue_Watcher: Watcher
 issue_Watchers: Watchers
@@ -36,6 +37,7 @@ issue_assigned: assigned
 issue_assigned_to: "assigned to"
 issue_am_assigned_to: "am assigned to"
 issue_assignment_to: "assignment to"
+issue_priority: priority
 issue_Priority: Priority
 issue_priorities: priorities
 issue_category: category

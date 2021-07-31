@@ -5,9 +5,11 @@ Segnalazioni: Segnalazioni
 sottosegnalazione: sottoattività
 sottosegnalazioni: sottoattività
 Sottosegnalazioni: Sottoattività
+sottosegnalazione_una: "una "
 sottosegnalazione_La: "La "
 sottosegnalazione_dalle: "dalle "
 sottosegnalazione_spostata: spostata
+sottosegnalazione_aperta: aperta
 segnalazione_Madre: Attività principale
 segnalazione_madre: attività principale
 segnalazione_campo_Madre: Principale
@@ -70,6 +72,7 @@ segnalazione_osservatori: osservatori
 segnalazione_Osservatori: Osservatori
 segnalazione_osservatore_un: "un "
 segnalazione_Dimentica: Dimentica
+segnalazione_bloccata: bloccata
 segnalazione_assegnare: assegnare
 segnalazione_assegnata: assegnata
 segnalazione_Assegnata: Assegnata
@@ -137,6 +140,7 @@ segnalazione_tracker_Tutti: Tutti
 segnalazione_tracker_associato: associato
 segnalazione_tracker_eliminato: eliminato
 segnalazione_tracker_finali: finali
+segnalazione_priorita: priorità
 segnalazione_Priorita: Priorità
 segnalazione_priorita_agg: aggiornata
 tempo_Attivita: Attività

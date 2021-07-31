@@ -114,7 +114,6 @@ it:
   enumeration_issue_priorities: "%{segnalazione_Priorita} %{segnalazioni}"
   enumeration_activities: "%{tempo_Attivita} (time tracking)"
   setting_issue_list_default_columns: "Colonne predefinite mostrate nell'elenco %{segnalazioni}"
-  notice_no_issue_selected: "Nessuna %{segnalazione} selezionata! Seleziona %{segnalazione_le}%{segnalazioni} che intendi modificare."
   label_bulk_edit_selected_issues: "Modifica massiva %{segnalazione_delle}%{segnalazioni} %{segnalazione_selezionate}"
   notice_failed_to_save_issues: "Impossibile salvare %{count} %{segnalazioni} su %{total} selezionate: %{ids}."
   text_user_mail_option: "Per %{progetto_i}%{progetti} non %{progetto_selezionati}, riceverai solo le notifiche riguardanti le cose che %{segnalazione_osservi} o nelle quali sei coinvolto (per esempio %{segnalazioni} che hai creato o che ti sono %{segnalazione_state_assegnate})."
@@ -270,7 +269,7 @@ it:
   label_user_mail_option_only_assigned: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono %{segnalazione_assegnatario_lo}%{segnalazione_assegnatario}"
   label_user_mail_option_only_owner: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono autore"
   field_default_assigned_to: "%{segnalazione_Assegnatario} predefinito"
-  setting_close_duplicate_issues: "Chiudi %{segnalazioni} %{segnalazione_duplicate} automaticamente"
+  setting_close_duplicate_issues: "Chiudi automaticamente %{segnalazione_le}%{segnalazioni} %{segnalazione_duplicate}"
   text_login_required_html: "Disattivando l'autenticazione obbligatoria, ${progetto_i} %{progetti} %{progetto_pubblici} e il loro
     contenuto, saranno liberamente accessibili in rete. Si possono <a href=\"%{anonymous_role_path}\">modificare
     i permessi applicabili</a>."
@@ -290,6 +289,20 @@ it:
   label_updated_issues: "%{Segnalazioni} %{segnalazione_aggiornate}"
   field_recently_used_projects: "Numero di %{progetti} %{progetto_usati} recentemente nella selezione di ricerca rapida"
   label_optgroup_others: "%{progetto_Altri} %{progetti}"
-  field_history_default_tab: "Scheda predefinita di storico ${segnalazioni}"
+  field_history_default_tab: "Scheda predefinita per lo storico %{segnalazione_della}%{segnalazione}"
   label_issue_history_notes: "%{segnalazione_Note}"
-  setting_project_list_defaults: "Lista %{progetti} predefinita"
+  setting_project_list_defaults: "Colonne predefinite mostrate nell'elenco %{progetti}"
+  label_user_mail_notify_about_high_priority_issues_html: Notificami anche %{segnalazioni}
+    con una ${segnalazione_priorita} <em>%{prio}</em> o maggiore
+  label_assign_to_me: Assigna a me
+  notice_issue_not_closable_by_open_tasks: Questa %{segnalazione} non può essere %{segnalazione_chiusa} perché ha
+    almeno ${sottosegnalazione_una}${sottosegnalazione} %{sottosegnalazione_aperta}.
+  notice_issue_not_closable_by_blocking_issue: Questa %{segnalazione} non può essere %{segnalazione_chiusa} perché è
+    %{segnalazione_bloccata} da almeno %{segnalazione_una}%{segnalazione} %{segnalazione_aperta}.
+  notice_issue_not_reopenable_by_closed_parent_issue: Questa %{segnalazione} non può essere %{segnalazione_riaperta}
+    perché %{segnalazione_la}${segnalazione_madre} è %{segnalazione_chiusa}.
+  error_bulk_download_size_too_big: Questi allegati non possono essere scaricati assieme perché
+    la dimensione totale del file eccede quella massima (%{max_size})
+  label_download_all_attachments: Download all files
+  permission_delete_project: Cancella %{progetto_il}%{progetto}
+  button_add_subtask: Aggiungi %{sottosegnalazione}
