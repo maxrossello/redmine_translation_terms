@@ -31,7 +31,9 @@ it:
   field_activity: "%{tempo_Attivita}"
   field_issue_to: "%{Segnalazioni} %{segnalazione_correlate}"
   field_assignable: "E' possibile %{segnalazione_assegnare} %{segnalazioni} a questo ruolo"
-
+  field_default_issue_query: "Selezione %{segnalazioni} predefinita"
+  field_default_project_query: "Selezione %{progetti} predefinita"
+  
   setting_issues_export_limit: "Limite esportazione %{segnalazioni}"
   setting_commit_fix_keywords: "Parole chiave %{segnalazione_chiusura}"
   setting_cross_project_issue_relations: "Consenti la creazione di relazioni tra %{segnalazioni} in %{progetti} differenti"
@@ -86,7 +88,13 @@ it:
   label_related_issues: "%{Segnalazioni} %{segnalazione_correlate}"
   label_applied_status: "%{segnalazione_Stato} %{segnalazione_stato_applicato}"
   label_jump_to_a_project: "Vai %{progetto_al}%{progetto}..."
-
+  label_default_queries:
+    for_all_projects: "Per %{progetto_tutti} %{progetto_i}%{progetti}"
+    for_current_project: "Per %{progetto_il}%{progetto} corrente"
+    for_all_users: "Per tutti gli utenti"
+  label_subtask: "%{Sottosegnalazione}"
+  label_auto_watch_on_issue_contributed_to: "%{Segnalazioni} a cui ho contribuito"
+  
   button_watch: "%{segnalazione_Osserva}"
   button_unwatch: "%{segnalazione_Dimentica}"
 

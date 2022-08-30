@@ -23,17 +23,18 @@ Redmine::Plugin.register :redmine_translation_terms do
   name 'Redmine Translation Terms plugin'
   author 'Massimo Rossello'
   description 'Applies configured translations to general terms (e.g. issue -> work item, project -> workspace)'
-  version '4.2.3'
+  version '5.0.2'
   url 'https://github.com/maxrossello/redmine_translation_terms.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '4.2.3'
+  requires_redmine :version_or_higher => '5.0.2'
 end
 
-require_dependency 'i18n_patch'
+require_relative 'lib/i18n_patch'
+require_relative 'lib/redmine_i18n_patch'
 
-Rails.configuration.to_prepare do
-    Redmine::Plugin.registered_plugins.values.each do |plugin|
-        Rails.application.config.i18n.load_path += Dir.glob(File.join(plugin.directory, 'config', 'elocales', '*.yml'))
-    end
+Rails.configuration.after_initialize do
+  Redmine::Plugin.registered_plugins.values.each do |plugin|
+    I18n.load_path += Dir.glob(File.join(plugin.directory, 'config', 'elocales', '*.yml'))
+  end
 end
 

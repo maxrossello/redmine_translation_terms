@@ -1,5 +1,5 @@
 # Redmine plugin for Flexible Translation Terms
-# Copyright (C) 2018    Massimo Rossello
+# Copyright (C) 2018-   Massimo Rossello
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -16,21 +16,6 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 require 'i18n'
-require 'redmine/i18n'
-
-# Redmine::I18n seems to have cases of localize called with other than Date, DateTime, Time in
-# methods like format_date. Sometimes the I18n::l alias is not called.
-module RedmineI18nPatch
-  # localize
-  def l(*args)
-    if args.first.is_a?(Date) or args.first.is_a?(DateTime) or args.first.is_a?(Time)
-      ::I18n.localize(*args)
-    else
-      super *args
-    end
-  end
-end
-
 
 # patch to add interpolated translations
 module I18nPatch
@@ -40,10 +25,9 @@ module I18nPatch
       key = args.shift
       @overrides ||= Hash.new
       unless @overrides[I18n.locale]
-        files = []
+        files = Dir.glob(File.join(Rails.root, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
         Redmine::Plugin.registered_plugins.values.each do |plugin|
           files += Dir.glob(File.join(plugin.directory, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
-          files += Dir.glob(File.join(Rails.root, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
         end
         files.sort {|x,y| File.basename(x) <=> File.basename(y)}.each do |file|
           @overrides[I18n.locale] ||= {}
@@ -59,8 +43,4 @@ end
 
 unless I18n.singleton_class.included_modules.include?(I18nPatch)
   I18n.singleton_class.send(:prepend, I18nPatch)
-end
-
-unless Redmine::I18n.included_modules.include?(RedmineI18nPatch)
-  Redmine::I18n.send(:prepend, RedmineI18nPatch)
 end

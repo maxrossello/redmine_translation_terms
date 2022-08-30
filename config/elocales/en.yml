@@ -62,7 +62,9 @@ en:
   field_default_assigned_to: "Default %{issue_assignee}"
   field_recently_used_projects: "Number of recently used %{projects} in jump box"
   field_history_default_tab: "%{Issue}'s history default tab"
-
+  field_default_issue_query: "Default %{issue} query"
+  field_default_project_query: "Default %{project} query"
+    
   setting_issues_export_limit: "%{Issues} export limit"
   setting_default_projects_public: "New %{projects} are public by default"
   setting_cross_project_issue_relations: "Allow cross-%{project} %{issue} relations"
@@ -191,6 +193,7 @@ en:
   label_user_mail_option_only_assigned: "Only for things I %{issue_watch} or I %{issue_am_assigned_to}"
   label_user_mail_option_only_owner: "Only for things I %{issue_watch} or I am the owner of"
   label_user_mail_notify_about_high_priority_issues_html: "Also notify me about %{issues} with a %{issue_priority} of <em>%{prio}</em> or higher"  
+  label_auto_watch_on_issue_contributed_to: "%{Issues} I contributed to"
   label_issue_watchers: "%{issue_Watchers}"
   label_version_sharing_descendants: "With %{subprojects}"
   label_version_sharing_hierarchy: "With %{project} hierarchy"
@@ -225,6 +228,10 @@ en:
   label_new_project_issue_tab_enabled: 'Display the "New %{issue}" tab'
   label_optgroup_others: "Other %{projects}"
   label_last_notes: "Last %{issue_notes}"
+  label_default_queries:
+    for_all_projects: For all %{projects}
+    for_current_project: For current %{project}
+    for_all_users: For all users
   label_inherited_from_parent_project: "Inherited from parent %{project}"
   label_trackers_description: "%{issue_Trackers} description"
   label_open_trackers_description: "View all %{issue_trackers} description"
