@@ -51,7 +51,7 @@ module I18nPatch
         end
       end
       options.merge! @overrides[I18n.locale] if @overrides[I18n.locale]
-      super(key, options) rescue "translation missing: #{I18n.locale}.#{key}"
+      super(key, **options) rescue "translation missing: #{I18n.locale}.#{key}"
     end
     
     alias :t :translate
