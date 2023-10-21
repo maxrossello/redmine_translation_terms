@@ -21,11 +21,11 @@ require 'redmine/i18n'
 # methods like format_date. Sometimes the I18n::l alias is not called.
 module RedmineI18nPatch
   # localize
-  def l(*args)
+  def l(*args, **options)
     if args.first.is_a?(Date) or args.first.is_a?(DateTime) or args.first.is_a?(Time)
-      ::I18n.localize(*args)
+      ::I18n.localize(*args, **options)
     else
-      super *args
+      super *args, **options
     end
   end
 end
