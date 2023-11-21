@@ -20,8 +20,7 @@ require 'i18n'
 # patch to add interpolated translations
 module I18nPatch
     # translate with terms interpolation
-    def translate(*args)
-      options = args.last.is_a?(Hash) ? args.pop.dup : {}
+    def translate(*args, **options)
       key = args.shift
       @overrides ||= Hash.new
       unless @overrides[I18n.locale]
@@ -35,7 +34,7 @@ module I18nPatch
         end
       end
       options.merge! @overrides[I18n.locale] if @overrides[I18n.locale]
-      super(key, options) rescue "translation missing: #{I18n.locale}.#{key}"
+      super(key, **options) rescue "translation missing: #{I18n.locale}.#{key}"
     end
     
     alias :t :translate
