@@ -1,11 +1,11 @@
 # Redmine Translation Terms
 
-Allows to customize specific terms in Redmine translations, and allows third party plugins to support translations containing customizable terms.
 *En*, *en-GB* and *it* locales are supported.
 
-## TL;DR
+Ever wanted to address your Redmine installation to a more specific scope? Terms like *issue* or *project* may be too generic if you want to target e.g. *activities*, *opportunities*, *customer requests* or *work packages* within e.g. *workgroups*, *scopes* or *organizational levels*.
 
-Redmine uses rather generic terms for the objects it manages (e.g. _issue_, _project_). If you use Redmine for a specific scope, you might want to use more specific terms. For example: _activity_ to replace _issue_, or _workgroup_ to replace _project_. This plugin offers a second layer of translation adding interpolations and related definitions to substitute specific terms.
+This plugin allows to customize specific terms in Redmine translations, and allows third party plugins to support translations containing customizable terms.
+It offers a second layer of translation adding interpolations and related definitions to substitute specific terms.
 
 Several terms are thus made replaceable. Moreover, each language comes with its own set of specific terms, to cope with gender differences impacting surrounding words too (e.g. articles and adjectives in italian).
 
