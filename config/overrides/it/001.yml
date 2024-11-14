@@ -8,11 +8,16 @@ Sottosegnalazioni: Sottoattività
 Sottosegnalazione: Sottoattività
 sottosegnalazione_una: "una "
 sottosegnalazione_La: "La "
+sottosegnalazione_la: "la "
 sottosegnalazione_dalle: "dalle "
 sottosegnalazione_spostata: spostata
 sottosegnalazione_aperta: aperta
+sottosegnalazioni_condivise: condivise
 segnalazione_Madre: Attività principale
 segnalazione_madre: attività principale
+segnalazione_Predefinita: Attività predefinita
+segnalazione_madre_una: "un'"
+segnalazione_madre_la: "l'"
 segnalazione_campo_Madre: Principale
 segnalazione_la: "la "
 segnalazione_la_pronome: "la"  # non apostrofato come in 'la stai aggiornando'
@@ -29,6 +34,7 @@ segnalazione_Le_mie: "Le mie"
 segnalazione_questa: "questa"
 segnalazione_Alcune: "Alcune"
 segnalazione_proprie: proprie
+segnalazione_tue: tue
 segnalazione_stata_aggiornata: "stata aggiornata"
 segnalazione_state_assegnate: "state assegnate"
 segnalazione_stata_trovata: "stata trovata"
@@ -41,6 +47,8 @@ segnalazione_chiuse: chiuse
 segnalazione_Chiudi: Chiudi
 segnalazione_chiusura: chiusura
 segnalazione_figlia: figlia
+segnalazione_figlia_di: figlia di
+segnalazione_collegata_a: collegata a
 segnalazione_mostrate: mostrate
 segnalazione_correlate: correlate
 segnalazione_completate: completate
@@ -48,6 +56,7 @@ segnalazione_pubbliche: pubbliche
 segnalazione_Privata: Privata
 segnalazione_private: private
 segnalazione_relative: relative
+segnalazione_correlate: correlate
 segnalazione_nuove: nuove
 segnalazione_Nuova: Nuova
 segnalazione_tutte: tutte
@@ -57,7 +66,7 @@ segnalazione_aggiunte: aggiunte
 segnalazione_aggiornate: aggiornate
 segnalazione_referenziate: referenziate
 segnalazione_risolte: risolte
-segnalazione_rimossa: rimossa
+segnalazione_rimossa: eliminata
 segnalazione_creata: creata
 segnalazione_Creata: Creata
 segnalazione_create: create
@@ -97,7 +106,10 @@ segnalazione_stati: stati
 segnalazione_Stato: Stato
 segnalazione_Stati: Stati
 segnalazione_stato_lo: "lo "
+segnalazione_stato_gli: "gli "
+segnalazione_stato_degli: "degli "
 segnalazione_stato_questo: questo
+segnalazione_stato_tutti: tutti
 segnalazione_stato_Nessuno: Nessuno
 segnalazione_stato_Nuovo: Nuovo
 segnalazione_stati_Nuovi: Nuovi
@@ -125,11 +137,16 @@ segnalazione_nota_salvata: salvata
 segnalazione_nota_precedenti: precedenti
 segnalazione_nota_mantenute: mantenute
 segnalazione_nota_private: private
+segnalazione_nota_proprie: proprie
+segnalazione_nota_Ultime: Ultime
+segnalazione_nota_Annota: Annota
 segnalazione_Tracker: Tracker
 segnalazione_tracker: tracker
 segnalazione_tracker_plurale: tracker
 segnalazione_Tracker_plurale: Tracker
+segnalazione_tracker_il: "il "
 segnalazione_tracker_i: "i "
+segnalazione_tracker_i_quali: "i quali"
 segnalazione_tracker_dei: "dei"
 segnalazione_tracker_Nuovo: Nuovo
 segnalazione_tracker_un: "un "
@@ -144,6 +161,11 @@ segnalazione_tracker_finali: finali
 segnalazione_priorita: priorità
 segnalazione_Priorita: Priorità
 segnalazione_priorita_agg: aggiornata
+segnalazione_priorita_Bassa: Bassa
+segnalazione_priorita_Normale: Normale
+segnalazione_priorita_Alta: Alta
+segnalazione_priorita_Urgente: Urgente
+segnalazione_priorita_Immediata: Immediata
 tempo_Attivita: Attività
 diario_Attivita: Attività
 progetto: progetto
@@ -177,7 +199,9 @@ progetto_questo: questo
 progetto_Questo: Questo
 progetto_Ultimi: Ultimi
 progetto_registrati: registrati
+progetto_pubblico: pubblico
 progetto_pubblici: pubblici
+progetto_privato: privato
 progetto_selezionati: selezionati
 progetto_visibili: visibili
 progetto_chiuso: chiuso
@@ -189,6 +213,15 @@ progetto_stato: stato  # come in "e' stato"
 progetto_privo: privo
 progetto_diversi: diversi
 progetto_usati: usati
+progetto_eliminato: eliminato
+progetto_programmato: programmato
+progetto_renderlo: renderlo
+progetto_sottoprogetto_i: "i "
+progetto_sottoprogetto_i_suoi: "i suoi"
+progetto_sottoprogetto_inclusi: inclusi
+progetto_sottoprogetto_possibili: possibili
+progetto_sottoprogetto_compresi: compresi
+progetto_sottoprogetto_stati_eliminati: "stati eliminati"
 sottoprogetto: sottoprogetto
 Sottoprogetto: Sottoprogetto
 sottoprogetti: sottoprogetti

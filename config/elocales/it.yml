@@ -10,7 +10,7 @@ it:
         not_same_project: "non appartiene %{progetto_allo_stesso} %{progetto}"
         cant_link_an_issue_with_a_descendant: "Una %{segnalazione} non può essere collegata a %{segnalazione_una_delle_sue} discendenti"
         earlier_than_minimum_start_date: "non può essere precedente a %{date} a causa di una precedente %{segnalazione}"
-        open_issue_with_closed_parent: "%{segnalazione_Una}%{segnalazione} %{segnalazione_aperta} non può essere %{segnalazione_figlia} di %{segnalazione_una}%{segnalazione} %{segnalazione_chiusa}"
+        open_issue_with_closed_parent: "%{segnalazione_Una}%{segnalazione} %{segnalazione_aperta} non può essere %{segnalazione_collegata_a} %{segnalazione_madre_una}%{segnalazione_madre} %{segnalazione_chiusa}"
 
   field_created_on: "%{segnalazione_Creata}"
   field_updated_on: "%{segnalazione_Aggiornata}"
@@ -31,8 +31,9 @@ it:
   field_activity: "%{tempo_Attivita}"
   field_issue_to: "%{Segnalazioni} %{segnalazione_correlate}"
   field_assignable: "E' possibile %{segnalazione_assegnare} %{segnalazioni} a questo ruolo"
-  field_default_issue_query: "Selezione %{segnalazioni} predefinita"
-  field_default_project_query: "Selezione %{progetti} predefinita"
+  field_default_issue_query: "Query predefinita %{segnalazione}"
+  field_default_project_query: "Query predefinita %{progetto}"
+  field_default_time_entry_activity: "%{segnalazione_Predefinita} tempo speso"
   
   setting_issues_export_limit: "Limite esportazione %{segnalazioni}"
   setting_commit_fix_keywords: "Parole chiave %{segnalazione_chiusura}"
@@ -90,17 +91,26 @@ it:
   label_jump_to_a_project: "Vai %{progetto_al}%{progetto}..."
   label_default_queries:
     for_all_projects: "Per %{progetto_tutti} %{progetto_i}%{progetti}"
-    for_current_project: "Per %{progetto_il}%{progetto} corrente"
+    for_current_project: "Per %{progetto_il}%{progetto} attuale"
     for_all_users: "Per tutti gli utenti"
+    for_this_user: "Per questo utente"
   label_subtask: "%{Sottosegnalazione}"
+  label_auto_watch_on: "%{segnalazione_Osserva} automaticamente"
+  label_auto_watch_on_issue_created: "%{Segnalazioni} %{segnalazione_create} da me"
   label_auto_watch_on_issue_contributed_to: "%{Segnalazioni} a cui ho contribuito"
   
   button_watch: "%{segnalazione_Osserva}"
   button_unwatch: "%{segnalazione_Dimentica}"
+  button_annotate: "%{segnalazione_nota_Annota}"
 
   text_project_destroy_confirmation: "Sei sicuro di voler eliminare %{progetto_il}%{progetto} e tutti i dati ad esso collegati?"
+  text_projects_bulk_destroy_confirmation: "Vuoi davvero eliminare %{progetto_i}%{progetti} %{progetto_selezionati} e i dati correlati?"
+  text_projects_bulk_destroy_head: |
+    Stai per eliminare definitivamente %{progetto_i}seguenti %{progetti}, %{progetto_sottoprogetto_inclusi} %{progetto_sottoprogetto_possibili} %{sottoprogetti} e tutti i dati correlati.
+    Rivedi le informazioni di seguito e conferma che è effettivamente ciò che vuoi fare.
+    Questa azione non può essere annullata.
   text_workflow_edit: "Seleziona un ruolo ed %{segnalazione_tracker_un}%{segnalazione_tracker} per modificare il workflow"
-  text_tracker_no_workflow: "Nessun workflow definito per questo %{segnalazione_tracker}"
+  text_tracker_no_workflow: "Nessun workflow definito per %{segnalazione_tracker_questo} %{segnalazione_tracker}"
   text_issues_ref_in_commit_messages: "%{Segnalazioni} di riferimento e %{segnalazione_chiusura} nei messaggi di commit"
   text_issue_added: "%{author} ha aggiunto %{segnalazione_la}%{segnalazione} %{id}."
   text_issue_updated: "%{segnalazione_La}%{segnalazione} %{id} è %{segnalazione_stata_aggiornata} da %{author}."
@@ -118,12 +128,18 @@ it:
   default_issue_status_feedback: "%{segnalazione_stato_Commenti}"
   default_issue_status_closed: "%{segnalazione_stato_Chiuso}"
   default_issue_status_rejected: "%{segnalazione_stato_Rifiutato}"
-
+  
+  default_priority_low: "%{segnalazione_priorita_Bassa}"
+  default_priority_normal: "%{segnalazione_priorita_Normale}"
+  default_priority_high: "%{segnalazione_priorita_Alta}"
+  default_priority_urgent: "%{segnalazione_priorita_Urgente}"
+  default_priority_immediate: "%{segnalazione_priorita_Immediata}"
+  
   enumeration_issue_priorities: "%{segnalazione_Priorita} %{segnalazioni}"
   enumeration_activities: "%{tempo_Attivita} (time tracking)"
   setting_issue_list_default_columns: "Colonne predefinite mostrate nell'elenco %{segnalazioni}"
   label_bulk_edit_selected_issues: "Modifica massiva %{segnalazione_delle}%{segnalazioni} %{segnalazione_selezionate}"
-  notice_failed_to_save_issues: "Impossibile salvare %{count} %{segnalazioni} su %{total} selezionate: %{ids}."
+  notice_failed_to_save_issues: "Impossibile salvare %{count} %{segnalazioni} su %{total} %{segnalazione_selezionate}: %{ids}."
   text_user_mail_option: "Per %{progetto_i}%{progetti} non %{progetto_selezionati}, riceverai solo le notifiche riguardanti le cose che %{segnalazione_osservi} o nelle quali sei coinvolto (per esempio %{segnalazioni} che hai creato o che ti sono %{segnalazione_state_assegnate})."
   label_user_mail_option_selected: "Solo per gli eventi relativi ai %{progetti} %{progetto_selezionati}..."
   label_user_mail_option_all: "Per ogni evento relativo %{progetto_ad_uno_dei_miei} %{progetti}"
@@ -136,15 +152,22 @@ it:
   project_module_issue_tracking: "Tracking %{segnalazione_delle}%{segnalazioni}"
   text_destroy_time_entries_question: "%{hours} ore risultano spese %{segnalazione_sulle}%{segnalazioni} che stai per eliminare. Cosa vuoi fare ?"
   error_issue_not_found_in_project: 'La %{segnalazione} non è %{segnalazione_stata_trovata} o non appartiene %{progetto_al}%{progetto}'
-  text_assign_time_entries_to_project: "Assegna le ore segnalate al %{progetto}"
+  text_assign_time_entries_to_project: "Assegna le ore segnalate %{progetto_al}%{progetto}"
   text_reassign_time_entries: 'Riassegna le ore a %{segnalazione_questa} %{segnalazione}:'
   setting_activity_days_default: "Giorni mostrati sulle attività di %{progetto}"
   setting_display_subprojects_issues: "Mostra %{segnalazione_le}%{segnalazioni} %{progetto_dei}%{sottoprogetti} %{progetto_nel}%{progetto} principale in modo predefinito"
   setting_default_projects_public: "%{progetto_I}%{progetto_nuovi} %{progetti} sono %{progetto_pubblici} in modo predefinito"
   text_subprojects_destroy_warning: "Anche %{progetto_i_suoi} %{sottoprogetti}: %{value} verranno eliminati."
+  text_subprojects_bulk_destroy: "%{progetto_sottoprogetto_compresi} %{progetto_sottoprogetto_i_suoi} %{sottoprogetti}: %{value}"
+  text_project_close_confirmation: "Vuoi davvero chiudere %{progetto_il}%{progetto} '%{value}' per %{progetto_renderlo} di sola lettura?"
+  text_project_reopen_confirmation: "Vuoi davvero riaprire %{progetto_il}%{progetto} '%{value}'?"
+  text_project_archive_confirmation: "Vuoi davvero archiviare %{progetto_il}%{progetto} '%{value}'?"
   label_and_its_subprojects: "%{value} e %{progetto_i_suoi} %{sottoprogetti}"
   mail_body_reminder: "%{count} %{segnalazioni} che ti sono %{segnalazione_state_assegnate} scadranno nei prossimi %{days} giorni:"
   mail_subject_reminder: "%{count} %{segnalazioni} in scadenza nei prossimi %{days} giorni"
+  mail_destroy_project_failed: "Impossibile eliminare %{progetto_il}%{progetto} %{value}."
+  mail_destroy_project_successful: "%{progetto_Il}%{progetto} %{value} è %{progetto_stato} %{progetto_eliminato} correttamente."
+  mail_destroy_project_with_subprojects_successful: "%{progetto_Il}%{progetto} %{value} e %{progetto_i_suoi} %{sottoprogetti} sono %{progetto_sottoprogetto_stati_eliminati} correttamente."
   label_issue_watchers: "%{segnalazione_Osservatori}"
   setting_sequential_project_identifiers: "Genera %{progetti} con identificativi in sequenza"
   permission_edit_issues: "Modifica %{segnalazioni}"
@@ -159,7 +182,7 @@ it:
   field_watcher: "%{segnalazione_Osservatore}"
   permission_add_project: "Crea %{progetto}"
   setting_new_project_user_role_id: "Ruolo assegnato agli utenti non amministratori che creano %{progetto_un}%{progetto}"
-  error_no_tracker_in_project: "%{segnalazione_tracker_Nessun} %{segnalazione_tracker} è %{segnalazione_tracker_associato} a %{progetto_questo} %{progetto}. Per favore verifica le impostazioni del %{progetto}."
+  error_no_tracker_in_project: "%{segnalazione_tracker_Nessun} %{segnalazione_tracker} è %{segnalazione_tracker_associato} a %{progetto_questo} %{progetto}. Per favore verifica le impostazioni %{progetto_del}%{progetto}."
   error_no_default_issue_status: '%{segnalazione_stato_Nessuno} %{segnalazione_stato} %{segnalazione_stato_predefinito} %{segnalazione_delle}%{segnalazioni} è %{segnalazione_stato_configurato}. Per favore verifica le impostazioni (Vai in "Amministrazione -> %{segnalazione_Stati} %{segnalazioni}").'
   permission_delete_issue_watchers: "Elimina %{segnalazione_osservatori}"
   error_can_not_reopen_issue_on_closed_version: "%{segnalazione_Una}%{segnalazione} %{segnalazione_assegnata} ad una versione chiusa non può essere %{segnalazione_riaperta}"
@@ -186,7 +209,7 @@ it:
     Sei sicuro di voler continuare?"
   permission_manage_project_activities: "Gestisci attività %{progetti}"
   error_unable_delete_issue_status: "Impossibile eliminare %{segnalazione_stato_lo}%{segnalazione_stato} %{segnalazioni} (%{value})"
-  permission_manage_subtasks: "Gestisci %{sottosegnalazione}"
+  permission_manage_subtasks: "Gestisci %{sottosegnalazioni}"
   field_parent_issue: "%{segnalazione_Madre}"
   label_subtask_plural: "%{Sottosegnalazioni}"
   label_project_copy_notifications: "Invia notifiche email durante la copia %{progetto_del}%{progetto}"
@@ -204,6 +227,9 @@ it:
   field_issues_visibility: "Visibilità %{segnalazioni}"
   label_issues_visibility_all: "${segnalazione_Tutte} %{segnalazione_le}%{segnalazioni}"
   permission_set_own_issues_private: "Imposta %{segnalazione_le}%{segnalazione_proprie} %{segnalazioni} %{segnalazione_pubbliche} o %{segnalazione_private}"
+  permission_add_issue_notes: "Aggiungi %{segnalazione_note}"
+  permission_edit_issue_notes: "Modifica %{segnalazione_note}"
+  permission_edit_own_issue_notes: "Modifica %{segnalazione_nota_proprie} %{segnalazione_note}"
   field_is_private: "%{segnalazione_Privata}"
   permission_set_issues_private: "Imposta %{segnalazione_le}%{segnalazioni} %{segnalazione_pubbliche} o %{segnalazione_private}"
   label_issues_visibility_public: "%{segnalazione_Tutte} %{segnalazione_le}%{segnalazioni} non %{segnalazione_private}"
@@ -223,12 +249,13 @@ it:
   text_issue_conflict_resolution_add_notes: "Aggiunge %{segnalazione_nota_le_mie} %{segnalazione_note} e non salvare le mie ulteriori modifiche"
   text_issue_conflict_resolution_overwrite: "Applica comunque le mie modifiche (%{segnalazione_nota_le}%{segnalazione_note} %{segnalazione_nota_precedenti} verranno %{segnalazione_nota_mantenute} ma alcuni cambiamenti potrebbero essere sovrascritti)"
   notice_issue_update_conflict: "%{segnalazione_La}%{segnalazione} è %{segnalazione_stata_aggiornata} da un altro utente mentre %{segnalazione_la_pronome} stavi editando."
-  permission_manage_related_issues: "Gestisci %{segnalazione_relative} %{segnalazioni}"
+  permission_manage_related_issues: "Gestisci %{segnalazioni} %{segnalazione_correlate}"
   label_search_for_watchers: "Cerca %{segnalazione_osservatori} da aggiungere"
   permission_close_project: "Chiusura / riapertura %{progetto}"
   project_status_active: "%{progetto_attivo}"
   project_status_closed: "%{progetto_chiuso}"
   project_status_archived: "%{progetto_archiviato}"
+  project_status_scheduled_for_deletion: "%{progetto_programmato} per l'eliminazione"
   text_project_closed: "%{progetto_Questo} %{progetto} è %{progetto_chiuso} e in sola lettura."
   label_attribute_of_project: "%{progetto_del}%{progetto} %{name}"
   label_attribute_of_assigned_to: "%{segnalazione_Assegnatari} %{name}"
@@ -239,12 +266,13 @@ it:
   permission_view_private_notes: "Visualizza %{segnalazione_note} %{segnalazione_nota_private}"
   permission_set_notes_private: "Imposta %{segnalazione_note} come %{segnalazione_nota_private}"
   label_no_issues_in_project: "%{progetto} %{progetto_privo} di %{segnalazioni}"
-  setting_cross_project_subtasks: "Consenti %{sottosegnalazioni} fra %{progetti} %{progetto_diversi}"
+  setting_cross_project_subtasks: "Consenti %{sottosegnalazioni} %{sottosegnalazioni_condivise} fra %{progetti} %{progetto_diversi}"
   label_cross_project_descendants: "Con %{sottoprogetti}"
   label_cross_project_tree: "Con %{progetto} %{progetto_padre}"
   label_cross_project_hierarchy: "Con gerarchia %{progetto}"
   label_cross_project_system: "Con %{progetto_tutti} %{progetto_i}%{progetti}"
-  label_attribute_of_issue: "%{name} %{segnalazione}"
+  label_attribute_of_issue: "%{Segnalazione} %{name}"
+  label_last_notes: "%{segnalazione_nota_Ultime} %{segnalazione_note}"
   field_closed_on: "%{segnalazione_Chiusa}"
   setting_default_projects_tracker_ids: "%{segnalazione_Tracker_plurale} di default per %{progetto_nuovi} %{progetti}"
   label_issue_assigned_to_updated: "%{segnalazione_Assegnatario_agg}"
@@ -261,56 +289,52 @@ it:
   permission_import_issues: "Importa %{segnalazioni}"
   label_import_issues: "Importa %{segnalazioni}"
   label_assigned_issues: "%{Segnalazioni} %{segnalazione_assegnate}"
-  label_any_open_issues: "%{segnalazione_tutte} %{segnalazione_le}%{segnalazioni} %{segnalazione_aperte}"
-  label_no_open_issues: "escludi %{segnalazioni} %{segnalazione_aperte}"
-  error_no_tracker_allowed_for_new_issue_in_project: "%{progetto_Il}%{progetto} non ha %{segnalazione_tracker}
-    per cui puoi creare %{segnalazione_una}%{segnalazione}"
+  label_any_open_issues: "qualsiasi %{segnalazione} %{segnalazione_aperta}"
+  label_no_open_issues: "nessuna %{segnalazione} %{segnalazione_aperta}"
+  error_no_tracker_allowed_for_new_issue_in_project: "%{progetto_Il}%{progetto} non ha %{segnalazione_tracker} per %{segnalazione_tracker_i_quali} è possibile %{segnalazione_una}%{segnalazione}"
   label_tracker_all: "%{segnalazione_tracker_Tutti} %{segnalazione_tracker_i}%{segnalazione_tracker_plurale}"
   label_new_project_issue_tab_enabled: 'Mostra la scheda "%{segnalazione Nuova} %{segnalazione}"'
   setting_new_item_menu_tab: "Scheda di creazione oggetti nel menu %{progetto_del}%{progetto}"
-  error_no_projects_with_tracker_allowed_for_new_issue: "Non ci sono %{progetti} con %{segnalazione_tracker_plurale}
-    per cui puoi creare %{segnalazione_una}%{segnalazione}"
-  error_move_of_child_not_possible: '%{sottosegnalazione_La}%{sottosegnalazione} %{child} non può essere %{sottosegnalazione_spostata} %{progetto_nel}%{progetto_nuovo}
-    %{progetto}: %{errors}'
-  error_cannot_reassign_time_entries_to_an_issue_about_to_be_deleted: "Il tempo speso non può
-    essere riassegnato a %{segnalazione_una}%{segnalazione} che sta per essere %{segnalazione_rimossa}"
-  label_user_mail_option_only_assigned: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono %{segnalazione_assegnatario_lo}%{segnalazione_assegnatario}"
+  error_no_projects_with_tracker_allowed_for_new_issue: "Non ci sono %{progetti} con %{segnalazione_tracker_plurale} per %{segnalazione_tracker_i_quali} è possibile creare %{segnalazione_una}%{segnalazione}"
+  error_move_of_child_not_possible: "Impossibile spostare %{sottosegnalazione_la}%{sottosegnalazione} %{child} %{progetto_nel}%{progetto_nuovo} %{progetto}: %{errors}"
+  error_cannot_reassign_time_entries_to_an_issue_about_to_be_deleted: "Il tempo impiegato non può essere riassegnato a %{segnalazione_una}%{segnalazione} che sta per essere %{segnalazione_rimossa}"
+  label_user_mail_option_only_assigned: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono %{segnalazione_assegnatario}"
   label_user_mail_option_only_owner: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono autore"
   field_default_assigned_to: "%{segnalazione_Assegnatario} predefinito"
   setting_close_duplicate_issues: "Chiudi automaticamente %{segnalazione_le}%{segnalazioni} %{segnalazione_duplicate}"
-  text_login_required_html: "Disattivando l'autenticazione obbligatoria, ${progetto_i} %{progetti} %{progetto_pubblici} e il loro
-    contenuto, saranno liberamente accessibili in rete. Si possono <a href=\"%{anonymous_role_path}\">modificare
-    i permessi applicabili</a>."
+  text_login_required_html: "Disattivando l'autenticazione obbligatoria, ${progetto_i}%{progetti} %{progetto_pubblici} e il loro contenuto, saranno liberamente accessibili in rete. Si possono <a href=\"%{anonymous_role_path}\">modificare i permessi applicabili</a>."
   label_login_required_no: "No, consenti accesso anonimo %{progetto_ai} %{progetti} %{progetto_pubblici}"
-  text_project_is_public_non_member: "%{progetto_I}%{progetti} %{progetto_pubblici} e i loro contenuti sono disponibili
-    agli utenti autenticati"
-  text_project_is_public_anonymous: "%{progetto_I}%{progetti} %{progetto_pubblici} e i loro contenuti sono disponibili
-    in rete senza autenticazione"
+  text_project_is_public_non_member: "%{progetto_I}%{progetti} %{progetto_pubblici} e i loro contenuti sono accessibili a tutti gli utenti registrati."
+  text_project_is_public_anonymous: "%{progetto_I}%{progetti} %{progetto_pubblici} e i loro contenuti sono liberamente accessibili in rete."
   text_status_no_workflow: "%{segnalazione_tracker_Nessun} %{segnalazione_tracker} usa %{segnalazione_stato_questo} %{segnalazione_stato} in the workflows"
-  setting_show_status_changes_in_mail_subject: "Mostra cambiamenti di %{segnalazione_stato} nell'oggetto delle mail di notifica ${segnalazioni}"
+  setting_show_status_changes_in_mail_subject: "Mostra cambiamenti di %{segnalazione_stato} nell'oggetto delle mail di notifica"
   label_inherited_from_parent_project: "Ereditato %{progetto_dal} %{progetto} %{progetto_padre}"
   label_trackers_description: "Descrizione %{segnalazione_tracker_dei} %{segnalazione_tracker_plurale}"
   label_open_trackers_description: "Vedi tutte le descrizioni %{segnalazione_tracker_dei} %{segnalazione_tracker_plurale}"
+  label_issue_statuses_description: "Descrizione %{segnalazione_stato_degli}%{segnalazione_stati} %{segnalazione_delle}%{segnalazioni}"
+  label_open_issue_statuses_description: "Visualizza la descrizione di %{segnalazione_stato_tutti} %{segnalazione_stato_gli}%{segnalazione_stati} %{segnalazione_delle}%{segnalazioni}"
   field_parent_issue_subject: "Oggetto %{segnalazione_della}%{segnalazione_madre}"
-  permission_edit_own_issues: "Modifica %{segnalazione_le}%{segnalazione_proprie} %{segnalazioni}"
-  text_select_apply_tracker: "Seleziona %{tracker}"
+  permission_edit_own_issues: "Modifica %{segnalazione_le}%{segnalazione_tue} %{segnalazioni}"
+  text_select_apply_tracker: "Seleziona %{segnalazione_tracker_il}%{segnalazione_tracker}"
+  text_select_apply_issue_status: "Seleziona %{segnalazione_stato_lo}%{segnalazione_stato} %{segnalazione_della}%{segnalazione}"
   label_updated_issues: "%{Segnalazioni} %{segnalazione_aggiornate}"
   field_recently_used_projects: "Numero di %{progetti} %{progetto_usati} recentemente nella selezione di ricerca rapida"
   label_optgroup_others: "%{progetto_Altri} %{progetti}"
   field_history_default_tab: "Scheda predefinita per lo storico %{segnalazione_della}%{segnalazione}"
   label_issue_history_notes: "%{segnalazione_Note}"
   setting_project_list_defaults: "Colonne predefinite mostrate nell'elenco %{progetti}"
-  label_user_mail_notify_about_high_priority_issues_html: Notificami anche %{segnalazioni}
-    con una ${segnalazione_priorita} <em>%{prio}</em> o maggiore
+  label_user_mail_notify_about_high_priority_issues_html: "Notificami anche %{segnalazioni} con ${segnalazione_priorita} <em>%{prio}</em> o superiore"
   label_assign_to_me: Assigna a me
   notice_issue_not_closable_by_open_tasks: Questa %{segnalazione} non può essere %{segnalazione_chiusa} perché ha
     almeno ${sottosegnalazione_una}${sottosegnalazione} %{sottosegnalazione_aperta}.
   notice_issue_not_closable_by_blocking_issue: Questa %{segnalazione} non può essere %{segnalazione_chiusa} perché è
     %{segnalazione_bloccata} da almeno %{segnalazione_una}%{segnalazione} %{segnalazione_aperta}.
   notice_issue_not_reopenable_by_closed_parent_issue: Questa %{segnalazione} non può essere %{segnalazione_riaperta}
-    perché %{segnalazione_la}${segnalazione_madre} è %{segnalazione_chiusa}.
+    perché %{segnalazione_madre_la}${segnalazione_madre} è %{segnalazione_chiusa}.
   error_bulk_download_size_too_big: Questi allegati non possono essere scaricati assieme perché
     la dimensione totale del file eccede quella massima (%{max_size})
   label_download_all_attachments: Download all files
-  permission_delete_project: Cancella %{progetto_il}%{progetto}
+  permission_delete_project: Elimina %{progetto_il}%{progetto}
   button_add_subtask: Aggiungi %{sottosegnalazione}
+  permission_select_project_publicity: "Imposta %{progetto_il}%{progetto} come %{progetto_pubblico} o %{progetto_privato}"
+  button_apply_issues_filter: "Applica filtro %{segnalazioni}"
