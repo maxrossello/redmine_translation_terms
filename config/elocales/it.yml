@@ -8,9 +8,9 @@ it:
     errors:
       messages:
         not_same_project: "non appartiene %{progetto_allo_stesso} %{progetto}"
-        cant_link_an_issue_with_a_descendant: "Una %{segnalazione} non può essere collegata a %{segnalazione_una_delle_sue} discendenti"
+        cant_link_an_issue_with_a_descendant: "Una %{segnalazione} non può essere %{segnalazione_collegata} a %{segnalazione_una_delle_sue} discendenti"
         earlier_than_minimum_start_date: "non può essere precedente a %{date} a causa di una precedente %{segnalazione}"
-        open_issue_with_closed_parent: "%{segnalazione_Una}%{segnalazione} %{segnalazione_aperta} non può essere %{segnalazione_collegata_a} %{segnalazione_madre_una}%{segnalazione_madre} %{segnalazione_chiusa}"
+        open_issue_with_closed_parent: "%{segnalazione_Una}%{segnalazione} %{segnalazione_aperta} non può essere %{segnalazione_collegata} a %{segnalazione_madre_una}%{segnalazione_madre} %{segnalazione_chiusa}"
 
   field_created_on: "%{segnalazione_Creata}"
   field_updated_on: "%{segnalazione_Aggiornata}"
@@ -213,7 +213,7 @@ it:
   field_parent_issue: "%{segnalazione_Madre}"
   label_subtask_plural: "%{Sottosegnalazioni}"
   label_project_copy_notifications: "Invia notifiche email durante la copia %{progetto_del}%{progetto}"
-  error_can_not_delete_tracker: "%{segnalazione_tracker_Questo} %{segnalazione_tracker} contiene %{segnalazioni} e non può essere %{segnalazione_tracker_eliminato}."
+  error_can_not_delete_tracker_html: "%{segnalazione_tracker_Questo} %{segnalazione_tracker} contiene %{segnalazioni} e non può essere %{segnalazione_tracker_eliminato}.<p>%{progetto_I}seguenti %{progetti} hanno %{segnalazioni} con %{segnalazione_tracker_questo} %{segnalazione_tracker}:<br>%{projects}</p>"
   field_principal: "%{segnalazione_campo_Madre}"
   label_user_mail_option_only_my_events: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono coinvolto"
   field_member_of_group: "Gruppo %{segnalazione_assegn_dello}%{segnalazione_assegnatario}"

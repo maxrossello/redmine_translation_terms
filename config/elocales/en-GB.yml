@@ -16,7 +16,7 @@ en-GB:
   error_issue_not_found_in_project: 'The %{issue} was not found or does not belong to this %{project}'
   error_no_tracker_in_project: 'No %{issue_tracker} is associated to this %{project}. Please check the %{project} settings.'
   error_no_default_issue_status: 'No default %{issue} %{issue_status} is defined. Please check your configuration (Go to "Administration -> %{Issue} %{issue_statuses}").'
-  error_can_not_delete_tracker: "This %{issue_tracker} contains %{issues} and cannot be deleted."
+  error_can_not_delete_tracker_html: "This %{issue_tracker} contains %{issues} and cannot be deleted.<p>The following %{project_projects} have %{issues} with this %{issue_tracker}:<br>%{projects}</p>"
   error_can_not_reopen_issue_on_closed_version: 'An %{issue} assigned to a closed version cannot be reopened'
   error_can_not_archive_project: "This %{project} cannot be archived"
   error_issue_done_ratios_not_updated: "%{Issue} done ratios not updated."
@@ -24,14 +24,14 @@ en-GB:
   error_workflow_copy_target: 'Please select target %{issue_tracker_or_trackers} and role(s)'
   error_unable_delete_issue_status: 'Unable to delete %{issue} %{issue_status} (%{value})'
   error_no_tracker_allowed_for_new_issue_in_project: "The %{project} doesn't have any %{issue_trackers} for which you can create an %{issue}"
-  error_no_projects_with_tracker_allowed_for_new_issue: "There are no %{projects} with %{issue_trackers} for which you can create an %{issue}"
+  error_no_projects_with_tracker_allowed_for_new_issue: "There are no %{project_projects} with %{issue_trackers} for which you can create an %{issue}"
   error_move_of_child_not_possible: "%{issue_Subtask} %{child} could not be moved to the new %{project}: %{errors}"
   error_cannot_reassign_time_entries_to_an_issue_about_to_be_deleted: "Spent time cannot be reassigned to an %{issue} that is about to be deleted"
 
   mail_subject_reminder: "%{count} %{issue_or_issues} due in the next %{days} days"
   mail_body_reminder: "%{count} %{issue_or_issues} that are %{issue_assigned_to} you are due in the next %{days} days:"
   field_closed_on: "%{issue_Closed}"
-  field_is_for_all: "For all %{projects}"
+  field_is_for_all: "For all %{project_projects}"
   field_category: "%{issue_Category}"
   field_project: "%{Project}"
   field_issue: "%{Issue}"
@@ -56,18 +56,18 @@ en-GB:
   field_default_issue_query: "Default %{issue} query"
 
   setting_issues_export_limit: "%{Issues} export limit"
-  setting_default_projects_public: "New %{projects} are public by default"
+  setting_default_projects_public: "New %{project_projects} are public by default"
   setting_cross_project_issue_relations: "Allow cross-%{project} %{issue} relations"
   setting_cross_project_subtasks: "Allow cross-%{project} %{issue_subtasks}"
   setting_issue_list_default_columns: "Default columns displayed on the %{issue} list"
-  setting_display_subprojects_issues: "Display %{subprojects} %{issues} on main %{projects} by default"
+  setting_display_subprojects_issues: "Display %{subprojects} %{issues} on main %{project_projects} by default"
   setting_issue_done_ratio: "Calculate the %{issue} done ratio with"
   setting_issue_done_ratio_issue_field: "Use the %{issue} field"
   setting_issue_done_ratio_issue_status: "Use the %{issue} %{issue_status}"
   setting_issue_group_assignment: "Allow %{issue} %{issue_assignment_to} groups"
   setting_default_issue_start_date_to_creation_date: "Use current date as start date for new %{issues}"
-  setting_commit_cross_project_ref: "Allow %{issues} of all the other %{projects} to be referenced and fixed"
-  setting_default_projects_tracker_ids: "Default %{issue_trackers} for new %{projects}"
+  setting_commit_cross_project_ref: "Allow %{issues} of all the other %{project_projects} to be referenced and fixed"
+  setting_default_projects_tracker_ids: "Default %{issue_trackers} for new %{project_projects}"
   setting_link_copied_issue: "Link %{issues} on copy"
   setting_new_item_menu_tab: "%{Project} menu tab for creating new objects"
 
@@ -104,11 +104,11 @@ en-GB:
   label_project_new: "New %{project}"
   label_project_plural: "%{Projects}"
   label_x_projects:
-    zero: "no %{projects}"
+    zero: "no %{project_projects}"
     one: "1 %{project}"
-    other: "%{count} %{projects}"
+    other: "%{count} %{project_projects}"
   label_project_all: "All %{Projects}"
-  label_project_latest: "Latest %{projects}"
+  label_project_latest: "Latest %{project_projects}"
   label_issue: "%{Issue}"
   label_issue_new: "New %{issue}"
   label_issue_plural: "%{Issues}"
@@ -130,7 +130,7 @@ en-GB:
   label_issue_category: "%{Issue} %{issue_category}"
   label_issue_category_plural: "%{Issue} %{issue_categories}"
   label_issue_category_new: "New %{issue_category}"
-  label_my_projects: "My %{projects}"
+  label_my_projects: "My %{project_projects}"
   label_reported_issues: "Reported %{issues}"
   label_assigned_issues: "%{issues_Assigned} %{issues}"
   label_assigned_to_me_issues: "%{Issues} %{issue_assigned_to} me"
@@ -138,7 +138,7 @@ en-GB:
   label_subproject_new: "New %{subproject}"
   label_and_its_subprojects: "%{value} and its %{subprojects}"
   label_change_status: "Change %{issue_status}"
-  label_public_projects: "Public %{projects}"
+  label_public_projects: "Public %{project_projects}"
   label_open_issues: "%{issue_open}"
   label_open_issues_plural: "%{issues_open}"
   label_closed_issues: "%{issue_closed}"
@@ -170,8 +170,8 @@ en-GB:
   label_applied_status: "Applied %{issue_status}"
   label_jump_to_a_project: "Jump to a %{project}..."
   label_bulk_edit_selected_issues: "Bulk edit selected %{issues}"
-  label_user_mail_option_all: "For any event on all my %{projects}"
-  label_user_mail_option_selected: "For any event on the selected %{projects} only..."
+  label_user_mail_option_all: "For any event on all my %{project_projects}"
+  label_user_mail_option_selected: "For any event on the selected %{project_projects} only..."
   label_user_mail_option_only_my_events: "Only for things I %{issue_watch} or I'm involved in"
   label_user_mail_option_only_assigned: "Only for things I %{issue_watch} or I %{issue_am_assigned_to}"
   label_user_mail_option_only_owner: "Only for things I %{issue_watch} or I am the owner of"
@@ -179,7 +179,7 @@ en-GB:
   label_version_sharing_descendants: "With %{subprojects}"
   label_version_sharing_hierarchy: "With %{project} hierarchy"
   label_version_sharing_tree: "With %{project} tree"
-  label_version_sharing_system: "With all %{projects}"
+  label_version_sharing_system: "With all %{project_projects}"
   label_update_issue_done_ratios: "Update %{issue} done ratios"
   label_display_used_statuses_only: "Only display %{issue_statuses} that are used by this %{issue_tracker}"
   label_subtask_plural: "%{issue_Subtasks}"
@@ -197,9 +197,9 @@ en-GB:
   label_cross_project_descendants: "With %{subprojects}"
   label_cross_project_tree: "With %{project} tree"
   label_cross_project_hierarchy: "With %{project} hierarchy"
-  label_cross_project_system: "With all %{projects}"
-  label_add_projects: "Add %{projects}"
-  label_users_visibility_members_of_visible_projects: "Members of visible %{projects}"
+  label_cross_project_system: "With all %{project_projects}"
+  label_add_projects: "Add %{project_projects}"
+  label_users_visibility_members_of_visible_projects: "Members of visible %{project_projects}"
   label_link_copied_issue: "Link copied %{issue}"
   label_search_open_issues_only: "%{issue_Open} %{issues} only"
   label_parent_task_attributes: "%{Parent_tasks} attributes"
@@ -210,7 +210,7 @@ en-GB:
   label_last_notes: "Last %{issue_notes}"
   label_auto_watch_on_issue_contributed_to: "%{Issues} I contributed to"
   label_default_queries:
-    for_all_projects: For all %{projects}
+    for_all_projects: For all %{project_projects}
     for_current_project: For current %{project}
     for_all_users: For all users
 
@@ -227,7 +227,7 @@ en-GB:
   text_issue_category_destroy_question: "Some %{issues} (%{count}) are %{issue_assigned_to} this %{issue_category}. What do you want to do?"
   text_issue_category_destroy_assignments: "Remove %{issue_category} assignments"
   text_issue_category_reassign_to: "Reassign %{issues} to this %{issue_category}"
-  text_user_mail_option: "For unselected %{projects}, you will only receive notifications about things you %{issue_watch} or you're involved in (eg. %{issues} you're the author or %{issue_assignee})."
+  text_user_mail_option: "For unselected %{project_projects}, you will only receive notifications about things you %{issue_watch} or you're involved in (eg. %{issues} you're the author or %{issue_assignee})."
   text_no_configuration_data: "Roles, %{issue_trackers}, %{issue} %{issue_statuses} and workflow have not been configured yet.\nIt is highly recommended to load the default configuration. You will be able to modify it once loaded."
   text_issues_destroy_confirmation: 'Are you sure you want to delete the selected %{issue_or_issues}?'
   text_issues_destroy_descendants_confirmation: "This will also delete %{count} %{issue_subtask_or_subtasks}."
@@ -245,13 +245,13 @@ en-GB:
   description_issue_category_reassign: "Choose %{issue} %{issue_category}"
 
   setting_close_duplicate_issues: "Close duplicate %{issues} automatically"
-  text_login_required_html: 'When not requiring authentication, public %{projects} and their
+  text_login_required_html: 'When not requiring authentication, public %{project_projects} and their
     contents are openly available on the network. You can <a href="%{anonymous_role_path}">edit
     the applicable permissions</a>.'
   label_login_required_no: No, allow anonymous access to public projects
-  text_project_is_public_non_member: "Public %{projects} and their contents are available
+  text_project_is_public_non_member: "Public %{project_projects} and their contents are available
     to all logged-in users."
-  text_project_is_public_anonymous: "Public %{projects} and their contents are openly available
+  text_project_is_public_anonymous: "Public %{project_projects} and their contents are openly available
     on the network."
   text_status_no_workflow: "No %{issue_tracker} uses this %{issue_status} in the workflows"
   setting_show_status_changes_in_mail_subject: "Show %{issue_status} changes in %{issue} mail notifications
@@ -263,8 +263,8 @@ en-GB:
   permission_edit_own_issues: "Edit own %{issues}"
   text_select_apply_tracker: "Select %{issue_tracker}"
   label_updated_issues: "Updated %{issues}"
-  field_recently_used_projects: "Number of recently used %{projects} in jump box"
-  label_optgroup_others: "Other %{projects}"
+  field_recently_used_projects: "Number of recently used %{project_projects} in jump box"
+  label_optgroup_others: "Other %{project_projects}"
   field_history_default_tab: "%{Issue}'s history default tab"
   label_issue_history_notes: "%{issue_Notes}"
   setting_project_list_defaults: "%{Projects} list defaults"
