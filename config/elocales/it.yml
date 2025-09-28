@@ -213,7 +213,7 @@ it:
   field_parent_issue: "%{segnalazione_Madre}"
   label_subtask_plural: "%{Sottosegnalazioni}"
   label_project_copy_notifications: "Invia notifiche email durante la copia %{progetto_del}%{progetto}"
-  error_can_not_delete_tracker_html: "%{segnalazione_tracker_Questo} %{segnalazione_tracker} contiene %{segnalazioni} e non può essere %{segnalazione_tracker_eliminato}.<p>%{progetto_I}seguenti %{progetti} hanno %{segnalazioni} con %{segnalazione_tracker_questo} %{segnalazione_tracker}:<br>%{projects}</p>"
+  error_can_not_delete_tracker_html: "%{segnalazione_tracker_Questo} %{segnalazione_tracker} contiene %{segnalazioni} e non può essere %{segnalazione_tracker_eliminato}.<p>%{progetto_I}seguenti %{progetti} presentano problemi con %{segnalazione_tracker_questo} %{segnalazione_tracker}:<br>%{projects}</p>"
   field_principal: "%{segnalazione_campo_Madre}"
   label_user_mail_option_only_my_events: "Solo se sono %{segnalazione_osservatore_un}%{segnalazione_osservatore} o sono coinvolto"
   field_member_of_group: "Gruppo %{segnalazione_assegn_dello}%{segnalazione_assegnatario}"
