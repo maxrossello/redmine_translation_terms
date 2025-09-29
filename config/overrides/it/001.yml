@@ -47,6 +47,7 @@ segnalazione_chiuse: chiuse
 segnalazione_Chiudi: Chiudi
 segnalazione_chiusura: chiusura
 segnalazione_figlia: figlia
+segnalazione_figlie: figlie
 segnalazione_figlia_di: figlia di
 segnalazione_collegata: collegata
 segnalazione_mostrate: mostrate
@@ -187,6 +188,7 @@ progetto_degli: "degli "  # come in 'degli altri progetti'
 progetto_allo_stesso: "allo stesso" # maschile/femminile
 progetto_ad_uno_dei_miei: "ad uno dei miei"
 progetto_i_suoi: "i suoi"
+progetto_I_seguenti: "I seguenti"
 progetto_miei: miei
 progetto_tutti: tutti
 progetto_Tutti: Tutti

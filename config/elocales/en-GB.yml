@@ -282,3 +282,11 @@ en-GB:
   button_add_subtask: Add %{issue_subtask}
   notice_invalid_watcher: 'Invalid %{issue_watcher}: User will not receive any notifications
     because it does not have access to view this object.'
+  error_spent_on_closed_issue: "Cannot log time on a closed %{issue}"
+  setting_timelog_accept_closed_issues: "Accept time logs on closed %{issues}"
+  setting_related_issues_default_columns: "Related and sub %{issues} list defaults"
+  error_can_not_remove_role_reason_members_html: "<p>The following %{project_projects} have members with this role:<br>%{projects}</p>"
+  permission_view_project: "View %{project_projects}"
+  permission_search_project: "Search %{project_projects}"
+  permission_view_members: "View %{project} members"
+  text_oauth_info_scopes: "Select the scopes this application may request. The application will not be allowed to do more than what is selected here. It will also always be limited by the roles and %{project} memberships of the user who authorized it."

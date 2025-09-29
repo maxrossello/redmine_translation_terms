@@ -338,3 +338,11 @@ it:
   button_add_subtask: Aggiungi %{sottosegnalazione}
   permission_select_project_publicity: "Imposta %{progetto_il}%{progetto} come %{progetto_pubblico} o %{progetto_privato}"
   button_apply_issues_filter: "Applica filtro %{segnalazioni}"
+  error_spent_on_closed_issue: "Non è consentito registrare il tempo su %{segnalazione_una}%{segnalazione} %{segnalazione_chiusa}"
+  setting_timelog_accept_closed_issues: "Accetta registrazioni di tempo su %{segnalazioni} %{segnalazione_chiuse}"
+  setting_related_issues_default_columns: "Colonne predefinite mostrate nell'elenco di %{segnalazioni} %{segnalazione_correlate} e %{segnalazione_figlie}"
+  error_can_not_remove_role_reason_members_html: "<p>%{progetto_I_seguenti} %{progetti} hanno membri con questo ruolo:<br>%{projects}</p>"
+  permission_view_project: "Visualizza %{progetto_i}%{progetti}"
+  permission_search_project: "Cerca %{progetto_i}%{progetti}"
+  permission_view_members: "Visualizza i membri %{progetto_del}%{progetto}"
+  text_oauth_info_scopes: "Seleziona i contesti che questa applicazione può richiedere. L'applicazione non potrà fare più di quanto selezionato qui. Sarà anche sempre limitata dai ruoli e dalle partecipazioni a %{progetti} dell'utente che ha dato autorizzazione."

@@ -21,6 +21,7 @@ en:
   error_no_tracker_in_project: 'No %{issue_tracker} is associated to this %{project}. Please check the %{project} settings.'
   error_no_default_issue_status: 'No default %{issue} %{issue_status} is defined. Please check your configuration (Go to "Administration -> %{Issue} %{issue_statuses}").'
   error_can_not_delete_tracker_html: "This %{issue_tracker} contains %{issues} and cannot be deleted.<p>The following %{project_projects} have %{issues} with this %{issue_tracker}:<br>%{projects}</p>"
+  error_can_not_remove_role_reason_members_html: "<p>The following %{project_projects} have members with this role:<br>%{projects}</p>"
   error_can_not_reopen_issue_on_closed_version: 'An %{issue} assigned to a closed version cannot be reopened'
   error_can_not_archive_project: "This %{project} cannot be archived"
   error_issue_done_ratios_not_updated: "%{Issue} done ratios not updated."
@@ -31,6 +32,7 @@ en:
   error_no_projects_with_tracker_allowed_for_new_issue: "There are no %{project_projects} with %{issue_trackers} for which you can create an %{issue}"
   error_move_of_child_not_possible: "%{issue_Subtask} %{child} could not be moved to the new %{project}: %{errors}"
   error_cannot_reassign_time_entries_to_an_issue_about_to_be_deleted: "Spent time cannot be reassigned to an %{issue} that is about to be deleted"
+  error_spent_on_closed_issue: "Cannot log time on a closed %{issue}"
 
   mail_subject_reminder: "%{count} %{issue_or_issues} due in the next %{days} days"
   mail_body_reminder: "%{count} %{issue_or_issues} that are %{issue_assigned_to} you are due in the next %{days} days:"
@@ -81,8 +83,10 @@ en:
   setting_link_copied_issue: "Link %{issues} on copy"
   setting_new_item_menu_tab: "%{Project} menu tab for creating new objects"
   setting_close_duplicate_issues: "Close duplicate %{issues} automatically"
+  setting_timelog_accept_closed_issues: "Accept time logs on closed %{issues}"
   setting_show_status_changes_in_mail_subject: "Show %{issue_status} changes in %{issue} mail notifications subject"
   setting_project_list_defaults: "%{Projects} list defaults"
+  setting_related_issues_default_columns: "Related and sub %{issues} list defaults"
 
   permission_add_project: "Create %{project}"
   permission_add_subprojects: "Create %{subprojects}"
@@ -112,6 +116,9 @@ en:
   permission_manage_subtasks: "Manage %{issue_subtasks}"
   permission_manage_related_issues: "Manage related %{issues}"
   permission_import_issues: "Import %{issues}"
+  permission_view_project: "View %{project_projects}"
+  permission_search_project: "Search %{project_projects}"
+  permission_view_members: "View %{project} members"
 
   project_module_issue_tracking: "%{Issue_tracking}"
 
@@ -266,6 +273,8 @@ en:
   text_issue_conflict_resolution_add_notes: "Add my %{issue_notes} and discard my other changes"
   text_project_closed: "This %{project} is closed and read-only."
   text_select_apply_tracker: "Select %{issue_tracker}"
+  text_select_apply_issue_status: "Select %{issue} %{issue_status}"
+  text_oauth_info_scopes: "Select the scopes this application may request. The application will not be allowed to do more than what is selected here. It will also always be limited by the roles and %{project} memberships of the user who authorized it."
 
   enumeration_issue_priorities: "%{Issue} %{issue_priorities}"
   description_choose_project: "%{Projects}"
