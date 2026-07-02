@@ -161,7 +161,6 @@ en:
   label_subproject_new: "New %{subproject}"
   label_and_its_subprojects: "%{value} and its %{subprojects}"
   label_change_status: "Change %{issue_status}"
-  label_public_projects: "Public %{project_projects}"
   label_open_issues: "%{issue_open}"
   label_open_issues_plural: "%{issues_open}"
   label_closed_issues: "%{issue_closed}"
@@ -191,7 +190,7 @@ en:
   label_watched_issues: "%{issue_Watched} %{issues}"
   label_related_issues: "Related %{issues}"
   label_applied_status: "Applied %{issue_status}"
-  label_delete_link_to_subtask: "Delete link to %{issue_subtask}"
+  label_subtask_remove: "Remove %{issue_subtask}"
   label_jump_to_a_project: "Jump to a %{project}..."
   label_bulk_edit_selected_issues: "Bulk edit selected %{issues}"
   label_user_mail_option_all: "For any event on all my %{project_projects}"
@@ -201,6 +200,7 @@ en:
   label_user_mail_option_only_owner: "Only for things I %{issue_watch} or I am the owner of"
   label_user_mail_notify_about_high_priority_issues_html: "Also notify me about %{issues} with a %{issue_priority} of <em>%{prio}</em> or higher"  
   label_auto_watch_on_issue_contributed_to: "%{Issues} I contributed to"
+  label_auto_watch_on_issue_assigned_to_me: "%{Issues} assigned to me"
   label_issue_watchers: "%{issue_Watchers}"
   label_version_sharing_descendants: "With %{subprojects}"
   label_version_sharing_hierarchy: "With %{project} hierarchy"
@@ -243,6 +243,10 @@ en:
   label_trackers_description: "%{issue_Trackers} description"
   label_open_trackers_description: "View all %{issue_trackers} description"
   label_issue_history_notes: "%{issue_Notes}"
+  label_enable_default_issue_due_date_offset: "Enable default due date for new %{issues}"
+  setting_default_issue_due_date_offset: "Default due date for new %{issues}"
+
+  webhook_url_info: "Redmine will send a POST request to this URL whenever one of the selected events occurs in one of the selected %{project_projects}."
 
   button_add_subtask: Add %{issue_subtask}
   
@@ -264,7 +268,6 @@ en:
   text_no_configuration_data: "Roles, %{issue_trackers}, %{issue} %{issue_statuses} and workflow have not been configured yet.\nIt is highly recommended to load the default configuration. You will be able to modify it once loaded."
   text_issues_destroy_confirmation: 'Are you sure you want to delete the selected %{issue_or_issues}?'
   text_issues_destroy_descendants_confirmation: "This will also delete %{count} %{issue_subtask_or_subtasks}."
-  text_select_project_modules: 'Select modules to enable for this %{project}:'
   text_destroy_time_entries_question: "%{hours} hours were reported on the %{issues} you are about to delete. What do you want to do?"
   text_assign_time_entries_to_project: "Assign reported hours to the %{project}"
   text_reassign_time_entries: 'Reassign reported hours to this %{issue}:'
@@ -277,7 +280,6 @@ en:
   text_oauth_info_scopes: "Select the scopes this application may request. The application will not be allowed to do more than what is selected here. It will also always be limited by the roles and %{project} memberships of the user who authorized it."
 
   enumeration_issue_priorities: "%{Issue} %{issue_priorities}"
-  description_choose_project: "%{Projects}"
   description_notes: "%{issue_Notes}"
   description_issue_category_reassign: "Choose %{issue} %{issue_category}"
 

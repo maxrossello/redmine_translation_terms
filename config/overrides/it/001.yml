@@ -58,7 +58,7 @@ segnalazione_pubbliche: pubbliche
 segnalazione_Privata: Privata
 segnalazione_private: private
 segnalazione_relative: relative
-segnalazione_correlate: correlate
+segnalazione_secondarie: secondarie
 segnalazione_nuove: nuove
 segnalazione_Nuova: Nuova
 segnalazione_tutte: tutte
@@ -187,6 +187,7 @@ progetto_del: "del "
 progetto_nel: "nel "
 progetto_degli: "degli "  # come in 'degli altri progetti'
 progetto_allo_stesso: "allo stesso" # maschile/femminile
+progetto_uno_dei: "uno dei "
 progetto_ad_uno_dei_miei: "ad uno dei miei"
 progetto_i_suoi: "i suoi"
 progetto_I_seguenti: "I seguenti"

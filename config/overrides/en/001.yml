@@ -33,6 +33,7 @@ issue_statuses: statuses
 issue_assignee: assignee
 issue_Assignee: Assignee
 issue_Assigned: Assigned
+issues_Assigned: Assigned
 issue_assigned: assigned
 issue_assigned_to: "assigned to"
 issue_am_assigned_to: "am assigned to"

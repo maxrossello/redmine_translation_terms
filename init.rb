@@ -23,18 +23,32 @@ Redmine::Plugin.register :redmine_translation_terms do
   name 'Redmine Translation Terms plugin'
   author 'Massimo Rossello'
   description 'Applies configured translations to general terms (e.g. issue -> work item, project -> workspace)'
-  version '6.1.1'
+  version '7.0.0'
   url 'https://github.com/maxrossello/redmine_translation_terms.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '6.1.1'
+  requires_redmine :version_or_higher => '7.0.0'
 end
 
-require_relative 'lib/i18n_patch'
-require_relative 'lib/redmine_i18n_patch'
+
+# STEP 1: Let's define a dedicated initializator in Rails 8 boot cycle
+#class RedmineTranslationTermsInitializer < Rails::Railtie
+#  initializer "redmine_translation_terms.hook_elocales", before: :load_config_initializers do |app|
+#    # Now Redmine has registered ALL plugins, 
+#    # but Rails 8 HASN'T indexed and frozen I18n.load_path yet
+#    Redmine::Plugin.registered_plugins.values.each do |plugin|
+#      elocales_path = Dir.glob(File.join(plugin.directory, 'config', 'elocales', '*.yml'))
+#      app.config.i18n.load_path.concat(elocales_path) if elocales_path.any?
+#    end
+#  end
+#end
+
+# STEP 2: apply I18n patches only after Rails 8 has ended the framework configuration
+# and the translation backends
 
 Rails.configuration.after_initialize do
-  Redmine::Plugin.registered_plugins.values.each do |plugin|
-    I18n.load_path += Dir.glob(File.join(plugin.directory, 'config', 'elocales', '*.yml'))
-  end
+  require_relative 'lib/i18n_patch'
+  require_relative 'lib/redmine_i18n_patch'
+  
+  # Tell Rails 8 that the backend has been modified and that it's ready
+  I18n.reload! if Rails.env.test? || Rails.env.development?
 end
-

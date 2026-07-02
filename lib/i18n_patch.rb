@@ -16,30 +16,97 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 require 'i18n'
+require 'yaml'
 
-# patch to add interpolated translations
+# Match the file name 'i18n_patch.rb' to satisfy Zeitwerk auto-loading rules
 module I18nPatch
-    # translate with terms interpolation
-    def translate(*args, **options)
-      key = args.shift
-      @overrides ||= Hash.new
-      unless @overrides[I18n.locale]
-        files = Dir.glob(File.join(Rails.root, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
-        Redmine::Plugin.registered_plugins.values.each do |plugin|
-          files += Dir.glob(File.join(plugin.directory, 'config', 'overrides', I18n.locale.to_s, '*.yml'))
-        end
-        files.sort {|x,y| File.basename(x) <=> File.basename(y)}.each do |file|
-          @overrides[I18n.locale] ||= {}
-          @overrides[I18n.locale].merge!( YAML::load_file(file).deep_symbolize_keys )
+
+  def translate(locale, key, options = I18n::EMPTY_HASH)
+    load_overrides_cache(locale)
+
+    options.deep_merge!(@overrides[locale])
+    
+    super(locale, key, options)
+  end
+
+  protected
+
+  # Intercept lookup to guarantee that custom templates from elocales take absolute precedence
+  def lookup(locale, key, scope = [], options = I18n::EMPTY_HASH)
+    load_elocales_cache(locale)
+
+    # If our custom elocales contain the key, return the template string directly
+    ref = key.is_a?(String) ? key.to_sym : key
+    if @elocales[locale] && @elocales[locale].key?(ref)
+      return @elocales[locale][ref]
+    end
+
+    # Fallback to standard Rails 8 lookup if no custom template is defined
+    super(locale, key, scope, options)
+  end
+
+  private
+
+  # Cache the custom tokenized templates from elocales safely preventing pre-boot empty states
+  def load_elocales_cache(locale)
+    @elocales ||= {}
+    return if @elocales_loaded_ready && @elocales.key?(locale)
+
+    # Mark as initialized to prevent immediate recursion loops during files reading
+    @elocales[locale] ||= {}
+
+    plugins = Redmine::Plugin.registered_plugins.values
+    return if plugins.empty?
+
+    plugins.each do |plugin|
+      # Look for files named 'it.yml', 'en.yml' inside config/elocales/
+      files = Dir.glob(File.join(plugin.directory, 'config', 'elocales', "#{locale}.yml"))
+      files.each do |file|
+        begin
+          data = YAML.load_file(file, aliases: true)
+          @elocales.deep_merge!(data.deep_symbolize_keys) if data.is_a?(Hash)
+        rescue => e
+          $stderr.puts "Error loading elocales file #{file}: #{e.message}"
         end
       end
-      options.merge! @overrides[I18n.locale] if @overrides[I18n.locale]
-      super(key, **options) rescue "translation missing: #{I18n.locale}.#{key}"
+    end
+
+    @elocales_loaded_ready = true
+  end
+
+  # Cache the final term replacements from overrides safely preventing pre-boot empty states
+  def load_overrides_cache(locale)
+    @overrides ||= {}
+    return if @overrides_loaded_ready && @overrides.key?(locale)
+
+    # Mark as initialized to prevent immediate recursion loops
+    @overrides[locale] ||= {}
+    
+    plugins = Redmine::Plugin.registered_plugins.values
+    return if plugins.empty?
+
+    # Look for files inside config/overrides/it/ or config/overrides/en/
+    files = Dir.glob(File.join(Rails.root, 'config', 'overrides', locale.to_s, '*.yml'))
+    
+    plugins.each do |plugin|
+      files += Dir.glob(File.join(plugin.directory, 'config', 'overrides', locale.to_s, '*.yml'))
     end
     
-    alias :t :translate
+    files.sort { |x, y| File.basename(x) <=> File.basename(y) }.each do |file|
+      begin
+        data = YAML.load_file(file, aliases: true)
+        # Assuming the overrides file maps target terms to replacement values
+        @overrides[locale].merge!(data.deep_symbolize_keys) if data.is_a?(Hash)
+      rescue => e
+        $stderr.puts "Error loading translation override file #{file}: #{e.message}"
+      end
+    end
+
+    @overrides_loaded_ready = true
+  end
 end
 
-unless I18n.singleton_class.included_modules.include?(I18nPatch)
-  I18n.singleton_class.send(:prepend, I18nPatch)
+# Apply the patch directly to the Simple Backend used by Rails 8
+unless I18n::Backend::Simple.included_modules.include?(I18nPatch)
+  I18n::Backend::Simple.send(:prepend, I18nPatch)
 end
