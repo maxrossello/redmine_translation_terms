@@ -243,17 +243,12 @@ en-GB:
   description_issue_category_reassign: "Choose %{issue} %{issue_category}"
 
   setting_close_duplicate_issues: "Close duplicate %{issues} automatically"
-  text_login_required_html: 'When not requiring authentication, public %{project_projects} and their
-    contents are openly available on the network. You can <a href="%{anonymous_role_path}">edit
-    the applicable permissions</a>.'
-  label_login_required_no: No, allow anonymous access to public projects
-  text_project_is_public_non_member: "Public %{project_projects} and their contents are available
-    to all logged-in users."
-  text_project_is_public_anonymous: "Public %{project_projects} and their contents are openly available
-    on the network."
+  text_login_required_html: 'When not requiring authentication, public %{project_projects} and their contents are openly available on the network. You can <a href="%{anonymous_role_path}">edit the applicable permissions</a>.'
+  label_login_required_no: "No, allow anonymous access to public %{project_projects}"
+  text_project_is_public_non_member: "Public %{project_projects} and their contents are available to all logged-in users."
+  text_project_is_public_anonymous: "Public %{project_projects} and their contents are openly available on the network."
   text_status_no_workflow: "No %{issue_tracker} uses this %{issue_status} in the workflows"
-  setting_show_status_changes_in_mail_subject: "Show %{issue_status} changes in %{issue} mail notifications
-    subject"
+  setting_show_status_changes_in_mail_subject: "Show %{issue_status} changes in %{issue} mail notifications subject"
   label_inherited_from_parent_project: "Inherited from parent %{project}"
   label_trackers_description: "%{issue_Trackers} description"
   label_open_trackers_description: "View all %{issue_trackers} description"
@@ -266,20 +261,14 @@ en-GB:
   field_history_default_tab: "%{Issue}'s history default tab"
   label_issue_history_notes: "%{issue_Notes}"
   setting_project_list_defaults: "%{Projects} list defaults"
-  label_user_mail_notify_about_high_priority_issues_html: Also notify me about %{issues}
-    with a %{issue_priority} of <em>%{prio}</em> or higher
-  notice_issue_not_closable_by_open_tasks: This %{issue} cannot be closed because it has
-    at least one open %{issue_subtask}.
-  notice_issue_not_closable_by_blocking_issue: This %{issue} cannot be closed because it
-    is blocked by at least one open %{issue}.
-  notice_issue_not_reopenable_by_closed_parent_issue: This %{issue} cannot be reopened
-    because its parent %{issue} is closed.
-  permission_delete_project: Delete the %{project}
-  text_project_destroy_enter_identifier: To confirm, please enter the %{project}'s identifier
-    (%{identifier}) below.
-  button_add_subtask: Add %{issue_subtask}
-  notice_invalid_watcher: 'Invalid %{issue_watcher}: User will not receive any notifications
-    because it does not have access to view this object.'
+  label_user_mail_notify_about_high_priority_issues_html: "Also notify me about %{issues} with a %{issue_priority} of <em>%{prio}</em> or higher"
+  notice_issue_not_closable_by_open_tasks: "This %{issue} cannot be closed because it has at least one open %{issue_subtask}."
+  notice_issue_not_closable_by_blocking_issue: "This %{issue} cannot be closed because it is blocked by at least one open %{issue}."
+  notice_issue_not_reopenable_by_closed_parent_issue: "This %{issue} cannot be reopened because its parent %{issue} is closed."
+  permission_delete_project: "Delete the %{project}"
+  text_project_destroy_enter_identifier: "To confirm, please enter the %{project}'s identifier (%{identifier}) below."
+  button_add_subtask: "Add %{issue_subtask}"
+  notice_invalid_watcher: 'Invalid %{issue_watcher}: User will not receive any notifications because it does not have access to view this object.'
   error_spent_on_closed_issue: "Cannot log time on a closed %{issue}"
   setting_timelog_accept_closed_issues: "Accept time logs on closed %{issues}"
   setting_related_issues_default_columns: "Related and sub %{issues} list defaults"
@@ -289,7 +278,7 @@ en-GB:
   permission_view_members: "View %{project} members"
   text_oauth_info_scopes: "Select the scopes this application may request. The application will not be allowed to do more than what is selected here. It will also always be limited by the roles and %{project} memberships of the user who authorized it."
 
-  webhook_url_info: "Redmine will send a POST request to this URL whenever one of the selected events occurs in one of the selected %{project_projects}.
+  webhook_url_info: "Redmine will send a POST request to this URL whenever one of the selected events occurs in one of the selected %{project_projects}."
   label_subtask_remove: "Remove %{issue_subtask}"
   label_enable_default_issue_due_date_offset: "Enable default due date for new %{issues}"
   setting_default_issue_due_date_offset: "Default due date for new %{issues}"
