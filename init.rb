@@ -23,10 +23,10 @@ Redmine::Plugin.register :redmine_translation_terms do
   name 'Redmine Translation Terms plugin'
   author 'Massimo Rossello'
   description 'Applies configured translations to general terms (e.g. issue -> work item, project -> workspace)'
-  version '7.0.0'
+  version '7.0.1'
   url 'https://github.com/maxrossello/redmine_translation_terms.git'
   author_url 'https://github.com/maxrossello'
-  requires_redmine :version_or_higher => '7.0.0'
+  requires_redmine :version_or_higher => '7.0.1'
 end
 
 

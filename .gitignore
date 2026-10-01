@@ -2,6 +2,7 @@
 .byebug_history
 .metadata/
 .project
+.pydevproject
 Gemfile.lock
 config/configuration.yml
 config/database*
