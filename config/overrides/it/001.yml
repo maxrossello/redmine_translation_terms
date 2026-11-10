@@ -52,7 +52,7 @@ segnalazione_figlie: figlie
 segnalazione_figlia_di: figlia di
 segnalazione_collegata: collegata
 segnalazione_mostrate: mostrate
-segnalazione_correlate: correlate
+segnalazione_correlata: correlata
 segnalazione_completate: completate
 segnalazione_pubbliche: pubbliche
 segnalazione_Privata: Privata
@@ -64,7 +64,9 @@ segnalazione_Nuova: Nuova
 segnalazione_tutte: tutte
 segnalazione_Tutte: Tutte
 segnalazione_selezionate: selezionate
+segnalazione_aggiunta: aggiunta
 segnalazione_aggiunte: aggiunte
+segnalazione_aggiornata: aggiornata
 segnalazione_aggiornate: aggiornate
 segnalazione_referenziate: referenziate
 segnalazione_risolte: risolte
@@ -160,6 +162,7 @@ segnalazione_tracker_Tutti: Tutti
 segnalazione_tracker_associato: associato
 segnalazione_tracker_eliminato: eliminato
 segnalazione_tracker_finali: finali
+segnalazione_tracker_predefiniti: predefiniti
 segnalazione_priorita: priorità
 segnalazione_Priorita: Priorità
 segnalazione_priorita_agg: aggiornata
